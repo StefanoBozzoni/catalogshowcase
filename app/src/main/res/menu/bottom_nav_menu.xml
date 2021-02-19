@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_latest"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="@string/navigation_latest_text" />
+
+    <item
+            android:id="@+id/navigation_lowest"
+            android:icon="@drawable/ic_bottom_24"
+            android:title="@string/navigation_lowestprice_text" />
+
+    <item
+            android:id="@+id/navigation_highest"
+            android:icon="@drawable/ic_top_24"
+            android:title="@string/navigation_highestprice_text" />
+
+</menu>
