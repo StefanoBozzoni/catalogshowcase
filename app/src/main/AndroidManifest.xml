@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
+            android:name=".CatalogShowcaseApplication"
             android:allowBackup="false"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
@@ -16,7 +17,7 @@
             tools:ignore="GoogleAppIndexingWarning">
 
         <activity
-                android:name="com.vjapp.catalogshowcase.MainActivity"
+                android:name="com.vjapp.catalogshowcase.CatalogSearchActivity"
                 android:screenOrientation="nosensor"
                 android:label="YOOX Catalog">
             <intent-filter>

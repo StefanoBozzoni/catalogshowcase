@@ -22,7 +22,7 @@ android {
     }
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.vjapp.catalogviewer"
+        applicationId "com.vjapp.catalogshowcase"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
