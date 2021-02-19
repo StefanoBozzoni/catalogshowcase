@@ -2,9 +2,11 @@ package com.vjapp.catalogshowcase.domain.mapper
 
 import com.vjapp.catalogshowcase.data.remote.model.catalog.CatalogItemResponse
 import com.vjapp.catalogshowcase.data.remote.model.catalog.CatalogResponse
-import com.vjapp.catalogshowcase.domain.model.CatalogEntity
-import com.vjapp.catalogshowcase.domain.model.CatalogItemEntity
-import com.vjapp.catalogshowcase.domain.model.SearchTypes
+import com.vjapp.catalogshowcase.data.remote.model.product.Color
+import com.vjapp.catalogshowcase.data.remote.model.product.ItemDescriptions
+import com.vjapp.catalogshowcase.data.remote.model.product.ProductResponse
+import com.vjapp.catalogshowcase.data.remote.model.product.Size
+import com.vjapp.catalogshowcase.domain.model.*
 
 class ServiceMapper {
 
@@ -24,12 +26,62 @@ class ServiceMapper {
             )
         }
 
+        fun mapToEntity(productResponse: ProductResponse) : ProductEntity {
+            with (productResponse) {
+                return ProductEntity(
+                    mapToEntity(itemDescriptions),
+                    cod10,
+                    quantity,
+                    brand.name,
+                    category.name,
+                    price = if (formattedPrice.discountedPrice == formattedPrice.fullPrice)
+                        formattedPrice.fullPrice else formattedPrice.discountedPrice,
+                    colors = colors.map{ color->mapToEntity(color)},
+                    sizes = sizes.map{ size->mapToEntity(size)}
+                )
+            }
+        }
+
+        fun mapToEntity(itemDescriptions: ItemDescriptions) : ItemDescriptionsEntity {
+            with (itemDescriptions) {
+                return ItemDescriptionsEntity(
+                    sizeInfo,
+                    productInfo,
+                    brandInfo
+                )
+            }
+        }
+
+        fun mapToEntity(color : Color) : ColorEntity {
+            with (color) {
+                return ColorEntity(
+                    colorId,
+                    colorCode,
+                    code10,
+                    name,
+                    rgb
+                )
+            }
+        }
+
         fun mapOrderType(orderType: SearchTypes): String {
             return when (orderType) {
                 SearchTypes.SEARCHRESULT -> "searchresult"
                 SearchTypes.LATEST -> "latest"
                 SearchTypes.LOWEST -> "lowest"
                 SearchTypes.HIGHEST -> "highest"
+            }
+        }
+
+        fun mapToEntity(size : Size) : SizeEntity {
+            with (size) {
+                return SizeEntity(
+                    id,
+                    name,
+                    isoTwoLetterCountryCode,
+                    defaultSizeLabel,
+                    alternativeSizeLabel
+                )
             }
         }
     }

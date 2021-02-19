@@ -6,4 +6,7 @@
     <string name="navigation_highestprice_text">Hightest price</string>
     <string name="immagine_del_prodotto">immagine del prodotto</string>
     <string name="riprova">Riprova</string>
+    <string name="description">Description</string>
+    <string name="colors">Colors</string>
+    <string name="sizes">Sizes</string>
 </resources>

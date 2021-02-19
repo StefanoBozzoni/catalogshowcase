@@ -68,6 +68,8 @@ class CatalogSearchFragment : Fragment(),
     }
 
     override fun onItemSelection(element: CatalogItemEntity) {
-        TODO("Not yet implemented")
+        this.context?.let {
+            startActivity(DetailActivity.newInstance(it))
+        }
     }
 }

@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 import com.vjapp.catalogshowcase.R
 import com.vjapp.catalogshowcase.domain.model.CatalogItemEntity
 import kotlinx.android.synthetic.main.catalog_item.view.*
@@ -48,12 +49,17 @@ class CatalogAdapter(private val listener: OnCatalogItemSelectionListener) : Rec
                 tvBrand.text = data.brandName
                 tvCategory.text = data.category
                 tvPrice.text = data.price
+                Picasso.get().load(buildUrl(data.cod10)).into(ivProduct)
             }
 
             itemView.setOnClickListener {
                 listener.onItemSelection(data)
             }
 
+        }
+
+        fun buildUrl(cod10:String):String {
+            return "https://cdn.yoox.biz/${cod10.substring(0..1)}/${cod10}_11_f.jpg"
         }
     }
 
