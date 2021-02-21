@@ -15,11 +15,19 @@
             android:theme="@style/AppTheme"
             android:usesCleartextTraffic="true"
             tools:ignore="GoogleAppIndexingWarning">
+        <uses-library android:name="android.test.runner"
+                android:required="false" />
+
+        <uses-library android:name="android.test.base"
+                android:required="false" />
+        <uses-library android:name="android.test.mock"
+                android:required="false" />
 
         <activity
                 android:name=".CatalogSearchActivity"
                 android:screenOrientation="nosensor"
                 android:label="YOOX Catalog">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

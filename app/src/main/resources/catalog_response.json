@@ -1,0 +1,1705 @@
+{
+  "SearchResultTitle": "UOMO",
+  "Items": [
+    {
+      "Cod10": "41763935FH",
+      "Brand": "MACKINTOSH",
+      "BrandId": 2025,
+      "Author": "",
+      "MicroCategoryCode": "gbbtt",
+      "MicroCategory": "Giubbotto",
+      "MicroCategoryPlural": "Giubbotti",
+      "MacroCategoryCode": "cpspll",
+      "MacroCategory": "Cappotti e Giubbotti",
+      "MacroCategoryPlural": "Cappotti e Giubbotti",
+      "FullPrice": 420,
+      "DiscountedPrice": 378,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "50"
+        },
+        {
+          "Text": "54"
+        },
+        {
+          "Text": "56"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 24,
+          "Cod10": "41763935FH",
+          "Description": "Verde militare",
+          "Rgb": "5A5C35"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "353",
+      "FormattedFullPrice": "EUR 420,00",
+      "FormattedDiscountedPrice": "EUR 378,00",
+      "DiscountedPriceEur": 378,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45401202HB",
+      "Brand": "EASTPAK  RAF SIMONS",
+      "BrandId": 10600,
+      "Title": "RAF SIMONS FUNCTIONAL \r\n",
+      "Author": "EASTPAK",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 220,
+      "DiscountedPrice": 220,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 20,
+          "Cod10": "45401202HB",
+          "Description": "Blu scuro",
+          "Rgb": "3A476D"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "2387",
+      "FormattedFullPrice": "EUR 220,00",
+      "FormattedDiscountedPrice": "EUR 220,00",
+      "DiscountedPriceEur": 220,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "11434387RA",
+      "Brand": "JIL SANDER",
+      "BrandId": 77,
+      "Author": "",
+      "MicroCategoryCode": "snkrs5",
+      "MicroCategory": "Sneakers",
+      "MicroCategoryPlural": "Sneakers",
+      "MacroCategoryCode": "clztr",
+      "MacroCategory": "Scarpe",
+      "MacroCategoryPlural": "Scarpe",
+      "FullPrice": 234,
+      "DiscountedPrice": 234,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "41"
+        },
+        {
+          "Text": "44"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 6,
+          "Cod10": "11434387RA",
+          "Description": "Bianco",
+          "Rgb": "FFFFFF"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "",
+      "FormattedFullPrice": "EUR 234,00",
+      "FormattedDiscountedPrice": "EUR 234,00",
+      "DiscountedPriceEur": 234,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "41786838QW",
+      "Brand": "8",
+      "BrandId": 5894,
+      "Author": "",
+      "MicroCategoryCode": "sprbt",
+      "MicroCategory": "Soprabito",
+      "MicroCategoryPlural": "Soprabiti",
+      "MacroCategoryCode": "cpspll",
+      "MacroCategory": "Cappotti e Giubbotti",
+      "MacroCategoryPlural": "Cappotti e Giubbotti",
+      "FullPrice": 139,
+      "DiscountedPrice": 139,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "46"
+        },
+        {
+          "Text": "48"
+        },
+        {
+          "Text": "50"
+        },
+        {
+          "Text": "52"
+        },
+        {
+          "Text": "54"
+        },
+        {
+          "Text": "56"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 20,
+          "Cod10": "41786838QW",
+          "Description": "Blu scuro",
+          "Rgb": "3A476D"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 139,00",
+      "FormattedDiscountedPrice": "EUR 139,00",
+      "DiscountedPriceEur": 139,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "38609631HH",
+      "Brand": "LANVIN",
+      "BrandId": 723,
+      "Author": "",
+      "MicroCategoryCode": "cmcqdr",
+      "MicroCategory": "Camicia a quadri",
+      "MicroCategoryPlural": "Camicie a quadri",
+      "MacroCategoryCode": "cmc",
+      "MacroCategory": "Camicie",
+      "MacroCategoryPlural": "Camicie",
+      "FullPrice": 169,
+      "DiscountedPrice": 169,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "37"
+        },
+        {
+          "Text": "38"
+        },
+        {
+          "Text": "40"
+        },
+        {
+          "Text": "41"
+        },
+        {
+          "Text": "42"
+        },
+        {
+          "Text": "43"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 18,
+          "Cod10": "38609631HH",
+          "Description": "Blu",
+          "Rgb": "214377"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 169,00",
+      "FormattedDiscountedPrice": "EUR 169,00",
+      "DiscountedPriceEur": 169,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "13083303UT",
+      "Brand": "VALENTINO",
+      "BrandId": 112,
+      "Author": "",
+      "MicroCategoryCode": "chns1",
+      "MicroCategory": "Chinos",
+      "MicroCategoryPlural": "Chinos",
+      "MacroCategoryCode": "pntln",
+      "MacroCategory": "Pantaloni",
+      "MacroCategoryPlural": "Pantaloni",
+      "FullPrice": 274,
+      "DiscountedPrice": 246,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "46"
+        },
+        {
+          "Text": "50"
+        },
+        {
+          "Text": "52"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 58,
+          "Cod10": "13083303UT",
+          "Description": "Coloniale",
+          "Rgb": "BDB498"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "353",
+      "FormattedFullPrice": "EUR 274,00",
+      "FormattedDiscountedPrice": "EUR 246,00",
+      "DiscountedPriceEur": 246,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45332034UJ",
+      "Brand": "FENDI",
+      "BrandId": 35,
+      "Author": "",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 790,
+      "DiscountedPrice": 790,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 66,
+          "Cod10": "45332034UJ",
+          "Description": "Blu china",
+          "Rgb": "373277"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "65",
+      "FormattedFullPrice": "EUR 790,00",
+      "FormattedDiscountedPrice": "EUR 790,00",
+      "DiscountedPriceEur": 790,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "12157718XJ",
+      "Brand": "ITALIANA",
+      "BrandId": 41197,
+      "Title": "ITALIANA. ITALY THROUGH THE LENS OF FASHION 1971-2001",
+      "Author": "",
+      "MicroCategoryCode": "tshrt",
+      "MicroCategory": "T-shirt",
+      "MicroCategoryPlural": "T-shirt",
+      "MacroCategoryCode": "tpwr",
+      "MacroCategory": "T-Shirt e Top",
+      "MacroCategoryPlural": "T-Shirt e Top",
+      "FullPrice": 40,
+      "DiscountedPrice": 40,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "M"
+        },
+        {
+          "Text": "L"
+        },
+        {
+          "Text": "XL"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 6,
+          "Cod10": "12157718XJ",
+          "Description": "Bianco",
+          "Rgb": "FFFFFF"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "2373",
+      "FormattedFullPrice": "EUR 40,00",
+      "FormattedDiscountedPrice": "EUR 40,00",
+      "DiscountedPriceEur": 40,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "12127748WW",
+      "Brand": "PRADA",
+      "BrandId": 63,
+      "Author": "",
+      "MicroCategoryCode": "flp1",
+      "MicroCategory": "Felpa",
+      "MicroCategoryPlural": "Felpe",
+      "MacroCategoryCode": "mglr",
+      "MacroCategory": "Maglie e Felpe",
+      "MacroCategoryPlural": "Maglie e Felpe",
+      "FullPrice": 349,
+      "DiscountedPrice": 349,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "XS"
+        },
+        {
+          "Text": "S"
+        },
+        {
+          "Text": "M"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 26,
+          "Cod10": "12127748WW",
+          "Description": "Grigio chiaro",
+          "Rgb": "C3C9D1"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "",
+      "FormattedFullPrice": "EUR 349,00",
+      "FormattedDiscountedPrice": "EUR 349,00",
+      "DiscountedPriceEur": 349,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "12092914DQ",
+      "Brand": "N° 21",
+      "BrandId": 18549,
+      "Author": "",
+      "MicroCategoryCode": "tshrt",
+      "MicroCategory": "T-shirt",
+      "MicroCategoryPlural": "T-shirt",
+      "MacroCategoryCode": "tpwr",
+      "MacroCategory": "T-Shirt e Top",
+      "MacroCategoryPlural": "T-Shirt e Top",
+      "FullPrice": 194,
+      "DiscountedPrice": 194,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "S"
+        },
+        {
+          "Text": "M"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "12092914DQ",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 194,00",
+      "FormattedDiscountedPrice": "EUR 194,00",
+      "DiscountedPriceEur": 194,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "11327342NX",
+      "Brand": "PRADA SPORT",
+      "BrandId": 96,
+      "Author": "",
+      "MicroCategoryCode": "stvlttmn",
+      "MicroCategory": "Stivaletti",
+      "MicroCategoryPlural": "Stivaletti",
+      "MacroCategoryCode": "clztr",
+      "MacroCategory": "Scarpe",
+      "MacroCategoryPlural": "Scarpe",
+      "FullPrice": 410,
+      "DiscountedPrice": 369,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "39"
+        },
+        {
+          "Text": "40"
+        },
+        {
+          "Text": "40.5"
+        },
+        {
+          "Text": "42.5"
+        },
+        {
+          "Text": "43"
+        },
+        {
+          "Text": "44"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "11327342NX",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": false,
+      "HasModelImage": false,
+      "SalesLineId": "1390",
+      "FormattedFullPrice": "EUR 410,00",
+      "FormattedDiscountedPrice": "EUR 369,00",
+      "DiscountedPriceEur": 369,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45401181FX",
+      "Brand": "EASTPAK  RAF SIMONS",
+      "BrandId": 10600,
+      "Title": "RAF SIMONS PADDED PAK'R\r\n",
+      "Author": "EASTPAK",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 190,
+      "DiscountedPrice": 190,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "45401181FX",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "2387",
+      "FormattedFullPrice": "EUR 190,00",
+      "FormattedDiscountedPrice": "EUR 190,00",
+      "DiscountedPriceEur": 190,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "46563572IW",
+      "Brand": "PERSOL",
+      "BrandId": 756,
+      "Title": "PO3170S \r\n",
+      "Author": "",
+      "MicroCategoryCode": "cchldsl",
+      "MicroCategory": "Occhiali da sole",
+      "MicroCategoryPlural": "Occhiali da sole",
+      "MacroCategoryCode": "cchl",
+      "MacroCategory": "Occhiali da sole",
+      "MacroCategoryPlural": "Occhiali da sole",
+      "FullPrice": 195,
+      "DiscountedPrice": 195,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "52"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 37,
+          "Cod10": "46563572IW",
+          "Description": "Marrone",
+          "Rgb": "836D5C"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "2373",
+      "FormattedFullPrice": "EUR 195,00",
+      "FormattedDiscountedPrice": "EUR 195,00",
+      "DiscountedPriceEur": 195,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "38697384JT",
+      "Brand": "STUSSY",
+      "BrandId": 1684,
+      "Title": "LETTS BDU JACKET\r\n",
+      "Author": "STUSSY",
+      "MicroCategoryCode": "gbbtt",
+      "MicroCategory": "Giubbotto",
+      "MicroCategoryPlural": "Giubbotti",
+      "MacroCategoryCode": "cpspll",
+      "MacroCategory": "Cappotti e Giubbotti",
+      "MacroCategoryPlural": "Cappotti e Giubbotti",
+      "FullPrice": 172,
+      "DiscountedPrice": 172,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "S"
+        },
+        {
+          "Text": "M"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 24,
+          "Cod10": "38697384JT",
+          "Description": "Verde militare",
+          "Rgb": "5A5C35"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "550",
+      "FormattedFullPrice": "EUR 172,00",
+      "FormattedDiscountedPrice": "EUR 172,00",
+      "DiscountedPriceEur": 172,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "11432816RV",
+      "Brand": "ADIDAS ORIGINALS",
+      "BrandId": 20710,
+      "Title": "EQT SUPPORT ADV\r\n",
+      "Author": "ADIDAS ORIGINALS",
+      "MicroCategoryCode": "snkrs5",
+      "MicroCategory": "Sneakers",
+      "MicroCategoryPlural": "Sneakers",
+      "MacroCategoryCode": "clztr",
+      "MacroCategory": "Scarpe",
+      "MacroCategoryPlural": "Scarpe",
+      "FullPrice": 130,
+      "DiscountedPrice": 130,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "40"
+        },
+        {
+          "Text": "40 ⅔"
+        },
+        {
+          "Text": "41 ⅓"
+        },
+        {
+          "Text": "42"
+        },
+        {
+          "Text": "42 ⅔"
+        },
+        {
+          "Text": "43 ⅓"
+        },
+        {
+          "Text": "44 ⅔"
+        },
+        {
+          "Text": "45 ⅓"
+        },
+        {
+          "Text": "46"
+        },
+        {
+          "Text": "46 ⅔"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 11,
+          "Cod10": "11432816RV",
+          "Description": "Rosso",
+          "Rgb": "A40000"
+        },
+        {
+          "Id": 7,
+          "Cod10": "11432816FR",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "550",
+      "FormattedFullPrice": "EUR 130,00",
+      "FormattedDiscountedPrice": "EUR 130,00",
+      "DiscountedPriceEur": 130,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45401149GK",
+      "Brand": "EASTPAK  RAF SIMONS",
+      "BrandId": 10600,
+      "Title": "RAF SIMONS PADDED PAK'R\r\n",
+      "Author": "EASTPAK",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 190,
+      "DiscountedPrice": 190,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 20,
+          "Cod10": "45401149GK",
+          "Description": "Blu scuro",
+          "Rgb": "3A476D"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "2373",
+      "FormattedFullPrice": "EUR 190,00",
+      "FormattedDiscountedPrice": "EUR 190,00",
+      "DiscountedPriceEur": 190,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "12131789OW",
+      "Brand": "BRUNELLO CUCINELLI",
+      "BrandId": 942,
+      "Author": "",
+      "MicroCategoryCode": "pl",
+      "MicroCategory": "Polo",
+      "MicroCategoryPlural": "Polo",
+      "MacroCategoryCode": "tpwr",
+      "MacroCategory": "T-Shirt e Top",
+      "MacroCategoryPlural": "T-Shirt e Top",
+      "FullPrice": 299,
+      "DiscountedPrice": 299,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "S"
+        },
+        {
+          "Text": "M"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 26,
+          "Cod10": "12131789OW",
+          "Description": "Grigio chiaro",
+          "Rgb": "C3C9D1"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 299,00",
+      "FormattedDiscountedPrice": "EUR 299,00",
+      "DiscountedPriceEur": 299,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "42637285JI",
+      "Brand": "LANVIN",
+      "BrandId": 723,
+      "Author": "",
+      "MicroCategoryCode": "cpsplljn",
+      "MicroCategory": "Giubbotto jeans",
+      "MicroCategoryPlural": "Giubbotti jeans",
+      "MacroCategoryCode": "jns",
+      "MacroCategory": "Jeans e Denim",
+      "MacroCategoryPlural": "Jeans e Denim",
+      "FullPrice": 379,
+      "DiscountedPrice": 379,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "48"
+        },
+        {
+          "Text": "50"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 18,
+          "Cod10": "42637285JI",
+          "Description": "Blu",
+          "Rgb": "214377"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 379,00",
+      "FormattedDiscountedPrice": "EUR 379,00",
+      "DiscountedPriceEur": 379,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "12152377SF",
+      "Brand": "TOM FORD",
+      "BrandId": 7674,
+      "Author": "",
+      "MicroCategoryCode": "tshrt",
+      "MicroCategory": "T-shirt",
+      "MicroCategoryPlural": "T-shirt",
+      "MacroCategoryCode": "tpwr",
+      "MacroCategory": "T-Shirt e Top",
+      "MacroCategoryPlural": "T-Shirt e Top",
+      "FullPrice": 229,
+      "DiscountedPrice": 229,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "46"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 26,
+          "Cod10": "12152377SF",
+          "Description": "Grigio chiaro",
+          "Rgb": "C3C9D1"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 229,00",
+      "FormattedDiscountedPrice": "EUR 229,00",
+      "DiscountedPriceEur": 229,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "13115608GL",
+      "Brand": "PRADA",
+      "BrandId": 63,
+      "Author": "",
+      "MicroCategoryCode": "pntln1",
+      "MicroCategory": "Pantalone",
+      "MicroCategoryPlural": "Pantaloni",
+      "MacroCategoryCode": "pntln",
+      "MacroCategory": "Pantaloni",
+      "MacroCategoryPlural": "Pantaloni",
+      "FullPrice": 510,
+      "DiscountedPrice": 510,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "46"
+        },
+        {
+          "Text": "48"
+        },
+        {
+          "Text": "50"
+        },
+        {
+          "Text": "52"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "13115608GL",
+          "Description": "Nero",
+          "Rgb": "000000"
+        },
+        {
+          "Id": 25,
+          "Cod10": "13115608FH",
+          "Description": "Grigio",
+          "Rgb": "8B949C"
+        },
+        {
+          "Id": 36,
+          "Cod10": "13115608OA",
+          "Description": "Antracite",
+          "Rgb": "55595D"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "",
+      "FormattedFullPrice": "EUR 510,00",
+      "FormattedDiscountedPrice": "EUR 510,00",
+      "DiscountedPriceEur": 510,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "11397227CN",
+      "Brand": "BRUNELLO CUCINELLI",
+      "BrandId": 942,
+      "Author": "",
+      "MicroCategoryCode": "mcssn",
+      "MicroCategory": "Mocassino",
+      "MicroCategoryPlural": "Mocassini",
+      "MacroCategoryCode": "clztr",
+      "MacroCategory": "Scarpe",
+      "MacroCategoryPlural": "Scarpe",
+      "FullPrice": 420,
+      "DiscountedPrice": 420,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "44"
+        },
+        {
+          "Text": "45"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 26,
+          "Cod10": "11397227CN",
+          "Description": "Grigio chiaro",
+          "Rgb": "C3C9D1"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "65",
+      "FormattedFullPrice": "EUR 420,00",
+      "FormattedDiscountedPrice": "EUR 420,00",
+      "DiscountedPriceEur": 420,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "12086991XR",
+      "Brand": "MAISON MARGIELA",
+      "BrandId": 50,
+      "Author": "",
+      "MicroCategoryCode": "tshrt",
+      "MicroCategory": "T-shirt",
+      "MicroCategoryPlural": "T-shirt",
+      "MacroCategoryCode": "tpwr",
+      "MacroCategory": "T-Shirt e Top",
+      "MacroCategoryPlural": "T-Shirt e Top",
+      "FullPrice": 199,
+      "DiscountedPrice": 199,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "46"
+        },
+        {
+          "Text": "48"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 40,
+          "Cod10": "12086991XR",
+          "Description": "Avorio",
+          "Rgb": "ECEACC"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 199,00",
+      "FormattedDiscountedPrice": "EUR 199,00",
+      "DiscountedPriceEur": 199,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "11443137UU",
+      "Brand": "ADIDAS ORIGINALS",
+      "BrandId": 20710,
+      "Title": "I-5923 \r\n",
+      "Author": "ADIDAS ORIGINALS",
+      "MicroCategoryCode": "snkrs5",
+      "MicroCategory": "Sneakers",
+      "MicroCategoryPlural": "Sneakers",
+      "MacroCategoryCode": "clztr",
+      "MacroCategory": "Scarpe",
+      "MacroCategoryPlural": "Scarpe",
+      "FullPrice": 140,
+      "DiscountedPrice": 140,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "41 ⅓"
+        },
+        {
+          "Text": "42"
+        },
+        {
+          "Text": "42 ⅔"
+        },
+        {
+          "Text": "43 ⅓"
+        },
+        {
+          "Text": "44 ⅔"
+        },
+        {
+          "Text": "45 ⅓"
+        },
+        {
+          "Text": "46"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 6,
+          "Cod10": "11443137UU",
+          "Description": "Bianco",
+          "Rgb": "FFFFFF"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "550",
+      "FormattedFullPrice": "EUR 140,00",
+      "FormattedDiscountedPrice": "EUR 140,00",
+      "DiscountedPriceEur": 140,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "42658066PW",
+      "Brand": "8",
+      "BrandId": 5894,
+      "Author": "",
+      "MicroCategoryCode": "pntlnjns",
+      "MicroCategory": "Pantaloni jeans",
+      "MicroCategoryPlural": "Pantaloni jeans",
+      "MacroCategoryCode": "jns",
+      "MacroCategory": "Jeans e Denim",
+      "MacroCategoryPlural": "Jeans e Denim",
+      "FullPrice": 59,
+      "DiscountedPrice": 59,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "46"
+        },
+        {
+          "Text": "48"
+        },
+        {
+          "Text": "50"
+        },
+        {
+          "Text": "52"
+        },
+        {
+          "Text": "54"
+        },
+        {
+          "Text": "56"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "42658066PW",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "",
+      "FormattedFullPrice": "EUR 59,00",
+      "FormattedDiscountedPrice": "EUR 59,00",
+      "DiscountedPriceEur": 59,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "13084485ST",
+      "Brand": "SALVATORE FERRAGAMO",
+      "BrandId": 753,
+      "Author": "",
+      "MicroCategoryCode": "chns1",
+      "MicroCategory": "Chinos",
+      "MicroCategoryPlural": "Chinos",
+      "MacroCategoryCode": "pntln",
+      "MacroCategory": "Pantaloni",
+      "MacroCategoryPlural": "Pantaloni",
+      "FullPrice": 244,
+      "DiscountedPrice": 217,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "44"
+        },
+        {
+          "Text": "48"
+        },
+        {
+          "Text": "50"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 20,
+          "Cod10": "13084485ST",
+          "Description": "Blu scuro",
+          "Rgb": "3A476D"
+        },
+        {
+          "Id": 24,
+          "Cod10": "13084485BG",
+          "Description": "Verde militare",
+          "Rgb": "5A5C35"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "353",
+      "FormattedFullPrice": "EUR 244,00",
+      "FormattedDiscountedPrice": "EUR 217,00",
+      "DiscountedPriceEur": 217,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45392663UT",
+      "Brand": "8",
+      "BrandId": 5894,
+      "Author": "",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 119,
+      "DiscountedPrice": 119,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "45392663UT",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 119,00",
+      "FormattedDiscountedPrice": "EUR 119,00",
+      "DiscountedPriceEur": 119,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "49343333LV",
+      "Brand": "VISVIM",
+      "BrandId": 5305,
+      "Author": "",
+      "MicroCategoryCode": "gbbtt",
+      "MicroCategory": "Giubbotto",
+      "MicroCategoryPlural": "Giubbotti",
+      "MacroCategoryCode": "cpspll",
+      "MacroCategory": "Cappotti e Giubbotti",
+      "MacroCategoryPlural": "Cappotti e Giubbotti",
+      "FullPrice": 650,
+      "DiscountedPrice": 650,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "46"
+        },
+        {
+          "Text": "48"
+        },
+        {
+          "Text": "50"
+        },
+        {
+          "Text": "52"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 41,
+          "Cod10": "49343333LV",
+          "Description": "Sabbia",
+          "Rgb": "D2CDC1"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "65",
+      "FormattedFullPrice": "EUR 650,00",
+      "FormattedDiscountedPrice": "EUR 650,00",
+      "DiscountedPriceEur": 650,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45331838NL",
+      "Brand": "PRADA",
+      "BrandId": 63,
+      "Author": "",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 510,
+      "DiscountedPrice": 510,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "45331838NL",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "60",
+      "FormattedFullPrice": "EUR 510,00",
+      "FormattedDiscountedPrice": "EUR 510,00",
+      "DiscountedPriceEur": 510,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "11440518TN",
+      "Brand": "MOON BOOT",
+      "BrandId": 10460,
+      "Title": "MOON BOOT MERCURY L.A.\r\n",
+      "Author": "MOON BOOT",
+      "MicroCategoryCode": "snkrs5",
+      "MicroCategory": "Sneakers",
+      "MicroCategoryPlural": "Sneakers",
+      "MacroCategoryCode": "clztr",
+      "MacroCategory": "Scarpe",
+      "MacroCategoryPlural": "Scarpe",
+      "FullPrice": 229,
+      "DiscountedPrice": 229,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "41"
+        },
+        {
+          "Text": "42"
+        },
+        {
+          "Text": "43"
+        },
+        {
+          "Text": "44"
+        },
+        {
+          "Text": "45"
+        },
+        {
+          "Text": "46"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 24,
+          "Cod10": "11440518TN",
+          "Description": "Verde militare",
+          "Rgb": "5A5C35"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "550",
+      "FormattedFullPrice": "EUR 229,00",
+      "FormattedDiscountedPrice": "EUR 229,00",
+      "DiscountedPriceEur": 229,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45392803UF",
+      "Brand": "JIL SANDER",
+      "BrandId": 77,
+      "Author": "",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 630,
+      "DiscountedPrice": 630,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "45392803UF",
+          "Description": "Nero",
+          "Rgb": "000000"
+        },
+        {
+          "Id": 22,
+          "Cod10": "45392803AS",
+          "Description": "Verde",
+          "Rgb": "3C941F"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "",
+      "FormattedFullPrice": "EUR 630,00",
+      "FormattedDiscountedPrice": "EUR 630,00",
+      "DiscountedPriceEur": 630,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "12152112VG",
+      "Brand": "BURBERRY",
+      "BrandId": 28997,
+      "Author": "",
+      "MicroCategoryCode": "flp1",
+      "MicroCategory": "Felpa",
+      "MicroCategoryPlural": "Felpe",
+      "MacroCategoryCode": "mglr",
+      "MacroCategory": "Maglie e Felpe",
+      "MacroCategoryPlural": "Maglie e Felpe",
+      "FullPrice": 334,
+      "DiscountedPrice": 334,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "M"
+        },
+        {
+          "Text": "L"
+        },
+        {
+          "Text": "XL"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 20,
+          "Cod10": "12152112VG",
+          "Description": "Blu scuro",
+          "Rgb": "3A476D"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "",
+      "FormattedFullPrice": "EUR 334,00",
+      "FormattedDiscountedPrice": "EUR 334,00",
+      "DiscountedPriceEur": 334,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "11439893CQ",
+      "Brand": "ADIDAS ORIGINALS",
+      "BrandId": 20710,
+      "Title": "NMD_R1 STLT PK\r\n",
+      "Author": "ADIDAS ORIGINALS",
+      "MicroCategoryCode": "snkrs5",
+      "MicroCategory": "Sneakers",
+      "MicroCategoryPlural": "Sneakers",
+      "MacroCategoryCode": "clztr",
+      "MacroCategory": "Scarpe",
+      "MacroCategoryPlural": "Scarpe",
+      "FullPrice": 180,
+      "DiscountedPrice": 180,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "40 ⅔"
+        },
+        {
+          "Text": "41 ⅓"
+        },
+        {
+          "Text": "42"
+        },
+        {
+          "Text": "42 ⅔"
+        },
+        {
+          "Text": "43 ⅓"
+        },
+        {
+          "Text": "44"
+        },
+        {
+          "Text": "44 ⅔"
+        },
+        {
+          "Text": "45 ⅓"
+        },
+        {
+          "Text": "46"
+        },
+        {
+          "Text": "46 ⅔"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 25,
+          "Cod10": "11439893CQ",
+          "Description": "Grigio",
+          "Rgb": "8B949C"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "550",
+      "FormattedFullPrice": "EUR 180,00",
+      "FormattedDiscountedPrice": "EUR 180,00",
+      "DiscountedPriceEur": 180,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "11426817KR",
+      "Brand": "8",
+      "BrandId": 5894,
+      "Author": "",
+      "MicroCategoryCode": "strngt",
+      "MicroCategory": "Stringate",
+      "MicroCategoryPlural": "Stringate",
+      "MacroCategoryCode": "clztr",
+      "MacroCategory": "Scarpe",
+      "MacroCategoryPlural": "Scarpe",
+      "FullPrice": 139,
+      "DiscountedPrice": 139,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "40"
+        },
+        {
+          "Text": "41"
+        },
+        {
+          "Text": "42"
+        },
+        {
+          "Text": "43"
+        },
+        {
+          "Text": "44"
+        },
+        {
+          "Text": "45"
+        },
+        {
+          "Text": "46"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 70,
+          "Cod10": "11426817KR",
+          "Description": "Testa di moro",
+          "Rgb": "7A485E"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 139,00",
+      "FormattedDiscountedPrice": "EUR 139,00",
+      "DiscountedPriceEur": 139,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "42642671RX",
+      "Brand": "LANVIN",
+      "BrandId": 723,
+      "Author": "",
+      "MicroCategoryCode": "pntlnjns",
+      "MicroCategory": "Pantaloni jeans",
+      "MicroCategoryPlural": "Pantaloni jeans",
+      "MacroCategoryCode": "jns",
+      "MacroCategory": "Jeans e Denim",
+      "MacroCategoryPlural": "Jeans e Denim",
+      "FullPrice": 219,
+      "DiscountedPrice": 219,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "29"
+        },
+        {
+          "Text": "31"
+        },
+        {
+          "Text": "32"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 18,
+          "Cod10": "42642671RX",
+          "Description": "Blu",
+          "Rgb": "214377"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "53",
+      "FormattedFullPrice": "EUR 219,00",
+      "FormattedDiscountedPrice": "EUR 219,00",
+      "DiscountedPriceEur": 219,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45401133HV",
+      "Brand": "EASTPAK  RAF SIMONS",
+      "BrandId": 10600,
+      "Title": "RAF SIMONS FUNCTIONAL \r\n",
+      "Author": "",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 220,
+      "DiscountedPrice": 220,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "45401133HV",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "2373",
+      "FormattedFullPrice": "EUR 220,00",
+      "FormattedDiscountedPrice": "EUR 220,00",
+      "DiscountedPriceEur": 220,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "41751632HM",
+      "Brand": "HAIDER ACKERMANN",
+      "BrandId": 2250,
+      "Author": "",
+      "MicroCategoryCode": "bmbr1",
+      "MicroCategory": "Bomber",
+      "MicroCategoryPlural": "Bomber",
+      "MacroCategoryCode": "cpspll",
+      "MacroCategory": "Cappotti e Giubbotti",
+      "MacroCategoryPlural": "Cappotti e Giubbotti",
+      "FullPrice": 2200,
+      "DiscountedPrice": 1562,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "S"
+        },
+        {
+          "Text": "M"
+        },
+        {
+          "Text": "L"
+        },
+        {
+          "Text": "XL"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "41751632HM",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "353",
+      "FormattedFullPrice": "EUR 2.200,00",
+      "FormattedDiscountedPrice": "EUR 1.562,00",
+      "DiscountedPriceEur": 1562,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "58040709EF",
+      "Brand": "B&O PLAY",
+      "BrandId": 39557,
+      "Title": "BEOPLAY H6 2ND GENERATION NATURAL\r\n",
+      "Author": "",
+      "MicroCategoryCode": "",
+      "MicroCategory": "Cuffie",
+      "MicroCategoryPlural": "Cuffie",
+      "MacroCategoryCode": "ccssr",
+      "MacroCategory": "Accessori",
+      "MacroCategoryPlural": "Accessori",
+      "FullPrice": 300,
+      "DiscountedPrice": 300,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 41,
+          "Cod10": "58040709EF",
+          "Description": "Sabbia",
+          "Rgb": "D2CDC1"
+        },
+        {
+          "Id": 7,
+          "Cod10": "58040709FO",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "2373",
+      "FormattedFullPrice": "EUR 300,00",
+      "FormattedDiscountedPrice": "EUR 300,00",
+      "DiscountedPriceEur": 300,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "41776670VC",
+      "Brand": "HAIDER ACKERMANN",
+      "BrandId": 2250,
+      "Author": "",
+      "MicroCategoryCode": "bmbr1",
+      "MicroCategory": "Bomber",
+      "MicroCategoryPlural": "Bomber",
+      "MacroCategoryCode": "cpspll",
+      "MacroCategory": "Cappotti e Giubbotti",
+      "MacroCategoryPlural": "Cappotti e Giubbotti",
+      "FullPrice": 1850,
+      "DiscountedPrice": 1406,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "S"
+        },
+        {
+          "Text": "M"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 7,
+          "Cod10": "41776670VC",
+          "Description": "Nero",
+          "Rgb": "000000"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "353",
+      "FormattedFullPrice": "EUR 1.850,00",
+      "FormattedDiscountedPrice": "EUR 1.406,00",
+      "DiscountedPriceEur": 1406,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "13070073XC",
+      "Brand": "PRADA",
+      "BrandId": 63,
+      "Author": "",
+      "MicroCategoryCode": "pntln1",
+      "MicroCategory": "Pantalone",
+      "MicroCategoryPlural": "Pantaloni",
+      "MacroCategoryCode": "pntln",
+      "MacroCategory": "Pantaloni",
+      "MacroCategoryPlural": "Pantaloni",
+      "FullPrice": 410,
+      "DiscountedPrice": 410,
+      "IsSoldout": false,
+      "Sizes": [
+        {
+          "Text": "44"
+        },
+        {
+          "Text": "52"
+        }
+      ],
+      "Colors": [
+        {
+          "Id": 36,
+          "Cod10": "13070073XC",
+          "Description": "Antracite",
+          "Rgb": "55595D"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": false,
+      "SalesLineId": "443",
+      "FormattedFullPrice": "EUR 410,00",
+      "FormattedDiscountedPrice": "EUR 410,00",
+      "DiscountedPriceEur": 410,
+      "HasAlternativeImage": false
+    },
+    {
+      "Cod10": "45401166ND",
+      "Brand": "EASTPAK  RAF SIMONS",
+      "BrandId": 10600,
+      "Title": "RAF SIMONS PADDED PAK'R\r\n",
+      "Author": "EASTPAK",
+      "MicroCategoryCode": "znmrsp",
+      "MicroCategory": "Zaini & Marsupi",
+      "MicroCategoryPlural": "Zaini & Marsupi",
+      "MacroCategoryCode": "brs",
+      "MacroCategory": "Borse",
+      "MacroCategoryPlural": "Borse",
+      "FullPrice": 190,
+      "DiscountedPrice": 190,
+      "IsSoldout": false,
+      "Sizes": [],
+      "Colors": [
+        {
+          "Id": 31,
+          "Cod10": "45401166ND",
+          "Description": "Cacao",
+          "Rgb": "695755"
+        }
+      ],
+      "HasFlipSide": true,
+      "HasModelImage": true,
+      "SalesLineId": "2387",
+      "FormattedFullPrice": "EUR 190,00",
+      "FormattedDiscountedPrice": "EUR 190,00",
+      "DiscountedPriceEur": 190,
+      "HasAlternativeImage": false
+    }
+  ],
+  "SearchRequest": {
+    "Tags": [],
+    "Department": "men",
+    "InheritedMicroDesignerIds": "",
+    "SortId": 0,
+    "SortValue": "",
+    "Season": "X",
+    "Gender": "U",
+    "Page": 1,
+    "ProductsPerPage": 40,
+    "TextSearch": "",
+    "MicroDesigners": [],
+    "Attributes": {}
+  },
+  "Area": "fashion",
+  "Analytics": {
+    "SelectedBrand": "",
+    "TypedTextSearch": "",
+    "TotalPages": "3152",
+    "Color": "",
+    "Season": "X",
+    "ItemPerPage": "40",
+    "SelectedPage": "1",
+    "TotalItems": "126067",
+    "Url": "/it/uomo/shoponline?dept=men&gender=U&page=1&season=X"
+  },
+  "BrandBannerActionUrl": "",
+  "MobileFriendlyUrl": "https://www.yoox.com/it/uomo/shoponline",
+  "Department": "men",
+  "ErrorCode": 0
+}

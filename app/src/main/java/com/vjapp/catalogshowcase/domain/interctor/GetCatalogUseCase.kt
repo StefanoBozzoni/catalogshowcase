@@ -4,10 +4,12 @@ import com.vjapp.catalogshowcase.domain.IRepository
 import com.vjapp.catalogshowcase.domain.mapper.ServiceMapper
 import com.vjapp.catalogshowcase.domain.model.CatalogEntity
 import com.vjapp.catalogshowcase.domain.model.SearchTypes
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 
 class GetCatalogUseCase(private val remoteRepository: IRepository) {
-    suspend fun execute(): CatalogEntity {
-        return remoteRepository.getCatalog("searchresult")
+    suspend fun execute(): CatalogEntity  {
+          return remoteRepository.getCatalog("searchresult")
     }
 
 }

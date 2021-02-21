@@ -30,6 +30,9 @@ class DetailFragment : Fragment() {
         R.id.fab_color_4
     )
 
+    var choosenColor :Int = -1
+
+    private set
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -104,12 +107,14 @@ class DetailFragment : Fragment() {
 
     fun setColor(v: View) {
         (v as FloatingActionButton).setImageResource(R.drawable.ic_done)
-        for (id in array_color_fab) {
+        array_color_fab.forEachIndexed { idx, id ->
             if (v.getId() != id) {
                 (view?.findViewById<View>(id) as FloatingActionButton).setImageResource(
                     android.R.color.transparent
                 )
+
             }
+            else choosenColor=idx
         }
     }
 

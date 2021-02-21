@@ -5,14 +5,15 @@ import com.vjapp.catalogshowcase.data.repository.datasource.RemoteDataSource
 import com.vjapp.catalogshowcase.data.setup.AppServiceFactory
 import com.vjapp.catalogshowcase.data.setup.HttpClientFactory
 import com.vjapp.catalogshowcase.data.setup.ServiceFactory
-import org.koin.dsl.module.module
+import org.koin.core.qualifier.named
+import org.koin.dsl.module
 
 val remoteModule = module {
-    single("HTTP_CLIENT") { HttpClientFactory(BASE_DOMAIN, allowedSSlFingerprints) }
-    single("SERVICE_FACTORY") { ServiceFactory(EnvironmentConfig.BASE_URL) }
+    single(named("HTTP_CLIENT")) { HttpClientFactory(BASE_DOMAIN, allowedSSlFingerprints) }
+    single(named("SERVICE_FACTORY")) { ServiceFactory(EnvironmentConfig.BASE_URL) }
 
     //single { (get("SERVICE_FACTORY") as ServiceFactory).retrofitInstance }
-    single("APP_SERVICE") { AppServiceFactory(get("HTTP_CLIENT")).getAppService(get("SERVICE_FACTORY")) }
-    single { RemoteDataSource(get("APP_SERVICE")) as RemoteDataSource }
+    single(named("APP_SERVICE")) { AppServiceFactory(get(named("HTTP_CLIENT"))).getAppService(get(named("SERVICE_FACTORY"))) }
+    single { RemoteDataSource(get(named("APP_SERVICE"))) as RemoteDataSource }
 
 }

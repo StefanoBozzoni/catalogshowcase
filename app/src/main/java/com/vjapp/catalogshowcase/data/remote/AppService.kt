@@ -12,9 +12,9 @@ interface AppService {
     @GET("https://httpbin.org/get")
     suspend fun httpBinGetDemo(): Response<Resphttpbin>
 
-    @GET("http://5aaf9b98bcad130014eeaf0b.mockapi.io/ynap/v1/{order}")
+    @GET("v1/{order}")
     suspend fun getCatalogList(@Path("order") order:String="searchresult"): Response<CatalogResponse>
 
-    @GET("http://5aaf9b98bcad130014eeaf0b.mockapi.io/ynap/v1/item")
+    @GET("v1/item")
     suspend fun getProduct(): Response<ProductResponse>
 }

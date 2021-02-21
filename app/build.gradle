@@ -29,6 +29,7 @@ android {
         versionName "1.0"
         signingConfig signingConfigs.debug
         vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
         release {
@@ -52,6 +53,11 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+        unitTests.includeAndroidResources = true
+    }
 }
 
 dependencies {
@@ -64,8 +70,8 @@ dependencies {
 
     implementation "org.jetbrains.anko:anko-commons:0.10.8"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
-    implementation 'org.koin:koin-core:1.0.2'
-    implementation 'org.koin:koin-android-viewmodel:1.0.2'
+    implementation 'org.koin:koin-core:2.2.2'
+    implementation 'org.koin:koin-android-viewmodel:2.2.2'
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.0"
@@ -83,7 +89,57 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
     implementation 'com.squareup.picasso:picasso:2.71828'
 
+
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+
+
+    testImplementation "android.arch.core:core-testing:2.1.0"
+    testImplementation "com.squareup.okhttp3:mockwebserver:4.2.1"
+    testImplementation "org.koin:koin-test:2.2.2"
+    testImplementation "io.mockk:mockk:1.9.3"
+    //testImplementation "com.google.truth:truth:1.0"
+    implementation 'org.hamcrest:hamcrest:2.2'
+
+    // AndroidX Test - JVM testing
+    testImplementation "androidx.test:core-ktx:1.3.0"
+    testImplementation "org.robolectric:robolectric:4.4"
+    testImplementation 'androidx.test.ext:junit-ktx:1.1.2'
+
+    testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2'
+
+    androidTestImplementation "android.arch.core:core-testing:1.1.1"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:3.3.0"
+
+    // Kotlin
+    implementation "androidx.fragment:fragment-ktx:1.3.0"
+    debugImplementation "androidx.fragment:fragment-testing:1.3.0"
+
     //Stetho
     //debugImplementation "com.facebook.stetho:stetho:${libVersions.stetho}"
+
+    //AndroidX
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test:rules:1.3.0'
+
+    // Assertions
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    //androidTestImplementation 'androidx.test.ext:truth:1.0.0'
+    //androidTestImplementation 'com.google.truth:truth:0.42'
+
+    // Espresso dependencies
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-accessibility:3.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-web:3.1.0'
+    androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.1.0'
+
+    // The following Espresso dependency can be either "implementation"
+    // or "androidTestImplementation", depending on whether you want the
+    // dependency to appear on your APK's compile classpath or the test APK
+    // classpath.
+    androidTestImplementation 'androidx.test.espresso:espresso-idling-resource:3.1.0'
 
 }

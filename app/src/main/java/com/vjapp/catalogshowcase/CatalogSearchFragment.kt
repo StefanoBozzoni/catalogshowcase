@@ -14,6 +14,7 @@ import com.vjapp.catalogshowcase.presentation.MainViewModel
 import com.vjapp.catalogshowcase.presentation.Resource
 import com.vjapp.catalogshowcase.presentation.ResourceState
 import kotlinx.android.synthetic.main.fragment_catalog_search.*
+import org.koin.android.viewmodel.ext.android.getSharedViewModel
 import org.koin.android.viewmodel.ext.android.sharedViewModel
 
 class CatalogSearchFragment : Fragment(),

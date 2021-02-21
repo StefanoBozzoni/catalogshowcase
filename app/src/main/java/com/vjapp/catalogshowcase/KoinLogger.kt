@@ -1,8 +1,9 @@
 package com.vjapp.catalogshowcase
 
 import android.util.Log
-import org.koin.log.Logger
+//import org.koin.log.Logger
 
+/*
 class KoinLogger : Logger {
     override fun debug(msg: String) {
         Log.d("KOIN",msg)
@@ -16,3 +17,5 @@ class KoinLogger : Logger {
         Log.i("KOIN",msg)
     }
 }
+
+ */

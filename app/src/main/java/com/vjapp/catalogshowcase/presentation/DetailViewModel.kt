@@ -5,15 +5,17 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vjapp.catalogshowcase.domain.interctor.GetProductUseCase
 import com.vjapp.catalogshowcase.domain.model.ProductEntity
+import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 
-class DetailViewModel(private val getProductUseCase: GetProductUseCase) : ViewModel() {
+class DetailViewModel(private val getProductUseCase: GetProductUseCase,
+                      private val coroutineDispatcher: CoroutineDispatcher) : ViewModel() {
     val getProductLiveData = MutableLiveData<Resource<ProductEntity>>()
 
     fun getProduct() {
-        viewModelScope.launch(Dispatchers.IO) {
+        viewModelScope.launch(coroutineDispatcher) {
             try {
                 getProductLiveData.postValue(Resource.loading())
                 val product = async { getProductUseCase.execute() }.await()

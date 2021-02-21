@@ -7,10 +7,7 @@ import com.vjapp.catalogshowcase.domain.mapper.ServiceMapper
 import com.vjapp.catalogshowcase.domain.model.CatalogEntity
 import com.vjapp.catalogshowcase.domain.model.ProductEntity
 
-class Repository(
-    private val remoteDataSource: RemoteDataSource,
-    private val context: Context
-) : IRepository {
+class Repository(private val remoteDataSource: RemoteDataSource): IRepository {
 
     override suspend fun httpBinGetDemo(): String {
         return remoteDataSource.httpBinDemo()
