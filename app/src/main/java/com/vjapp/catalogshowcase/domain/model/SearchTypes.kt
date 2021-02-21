@@ -4,5 +4,7 @@ enum class SearchTypes{
     SEARCHRESULT,
     LATEST,
     LOWEST,
-    HIGHEST
+    HIGHEST,
+    SEARCHRESULT2,
+    SEARCHRESULT3,
 }

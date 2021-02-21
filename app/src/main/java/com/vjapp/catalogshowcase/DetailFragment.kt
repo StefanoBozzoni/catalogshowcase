@@ -16,6 +16,8 @@ import com.vjapp.catalogshowcase.domain.model.ProductEntity
 import com.vjapp.catalogshowcase.presentation.DetailViewModel
 import com.vjapp.catalogshowcase.presentation.Resource
 import com.vjapp.catalogshowcase.presentation.ResourceState
+import kotlinx.android.synthetic.main.detail_from.*
+import kotlinx.android.synthetic.main.fragment_catalog_search.*
 import kotlinx.android.synthetic.main.fragment_detail2.*
 import org.koin.android.viewmodel.ext.android.sharedViewModel
 
@@ -29,7 +31,6 @@ class DetailFragment : Fragment() {
         R.id.fab_color_3,
         R.id.fab_color_4
     )
-
     var choosenColor :Int = -1
 
     private set
@@ -61,13 +62,12 @@ class DetailFragment : Fragment() {
 
     private fun handleGetProductComplete(response: Resource<ProductEntity>) {
         when (response.status) {
-            //ResourceState.LOADING -> vf_catalog.displayedChild = 0
+            ResourceState.LOADING -> vf_product.displayedChild = 0
             ResourceState.SUCCESS -> {
-                //vf_catalog.displayedChild = 1
+                vf_product.displayedChild = 1
                 setViewForSuccess(response.data)
             }
-            else -> {}
-            //ResourceState.ERROR -> vf_catalog.displayedChild = 2
+            ResourceState.ERROR -> vf_product.displayedChild = 2
         }
     }
 

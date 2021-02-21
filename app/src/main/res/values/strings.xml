@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Catalog ShowCase</string>
-    <string name="hello_world">Hello World</string>
-    <string name="navigation_latest_text">Latest</string>
-    <string name="navigation_lowestprice_text">Lowest Price</string>
-    <string name="navigation_highestprice_text">Hightest price</string>
+    <string name="navigation_latest_text">Ultimi arrivi</string>
+    <string name="navigation_lowestprice_text">Prezzi più bassi</string>
+    <string name="navigation_highestprice_text">Prezzi più alti</string>
     <string name="immagine_del_prodotto">immagine del prodotto</string>
     <string name="riprova">Riprova</string>
-    <string name="description">Description</string>
-    <string name="colors">Colors</string>
-    <string name="sizes">Sizes</string>
+    <string name="description">Descrizione</string>
+    <string name="colors">Colori</string>
+    <string name="sizes">Taglie</string>
+    <string name="errore_di_recupero_dati">Errore di recupero dati, verificare la connessione di rete</string>
 </resources>

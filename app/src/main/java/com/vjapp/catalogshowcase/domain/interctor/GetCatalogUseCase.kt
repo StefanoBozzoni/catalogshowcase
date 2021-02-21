@@ -8,8 +8,10 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
 class GetCatalogUseCase(private val remoteRepository: IRepository) {
-    suspend fun execute(): CatalogEntity  {
-          return remoteRepository.getCatalog("searchresult")
+    suspend fun execute(params:Params): CatalogEntity  {
+          return remoteRepository.getCatalog(ServiceMapper.mapOrderType(params.orderType))
     }
+
+    class Params(val orderType: SearchTypes)
 
 }

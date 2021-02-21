@@ -6,25 +6,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vjapp.catalogshowcase.domain.interctor.GetCatalogUseCase
 import com.vjapp.catalogshowcase.domain.model.CatalogEntity
+import com.vjapp.catalogshowcase.domain.model.OperationType
 import com.vjapp.catalogshowcase.domain.model.SearchTypes
 import kotlinx.coroutines.*
-import java.lang.RuntimeException
 
 class MainViewModel(private val getCatalogUseCase: GetCatalogUseCase, private val coroutineDispatcher: CoroutineDispatcher) : ViewModel() {
-    val getCatalogLiveData = MutableLiveData<Resource<CatalogEntity>>()
+    val getCatalogLiveData = MutableLiveData<Pair<Resource<CatalogEntity>, OperationType>>()
 
-    fun getCatalog() {
+    fun getCatalog(searchType: SearchTypes, operationType: OperationType =OperationType.REPLACE_LIST) {
         viewModelScope.launch(coroutineDispatcher) {
             try {
-                withContext(Dispatchers.Main) {
-                    getCatalogLiveData.value = Resource.loading()
-                }
-                val catalog = async { getCatalogUseCase.execute()}.await()
-                withContext(Dispatchers.Main) {
-                    getCatalogLiveData.value=Resource.success(catalog)
-                }
+                getCatalogLiveData.postValue( Pair(Resource.loading(), operationType))
+                val catalog = async { getCatalogUseCase.execute(GetCatalogUseCase.Params(searchType))}.await()
+                getCatalogLiveData.postValue(Pair(Resource.success(catalog), operationType))
             } catch (t: Throwable) {
-                getCatalogLiveData.postValue(Resource.error("Errore caricamento catalogo"))
+                getCatalogLiveData.postValue(Pair(Resource.error("Errore caricamento catalogo"), operationType))
             }
         }
     }

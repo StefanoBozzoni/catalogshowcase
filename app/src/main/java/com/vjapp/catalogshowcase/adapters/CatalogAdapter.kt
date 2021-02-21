@@ -41,6 +41,16 @@ class CatalogAdapter(private val listener: OnCatalogItemSelectionListener) : Rec
         notifyDataSetChanged()
     }
 
+    fun addData(data: List<CatalogItemEntity>) {
+        itemsList.addAll(data.toMutableList())
+        notifyDataSetChanged()
+    }
+
+    fun resetData() {
+        itemsList.clear()
+        notifyDataSetChanged()
+    }
+
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bind(data: CatalogItemEntity, position:Int) {

@@ -26,19 +26,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/image_view_icon_error"
+        android:text="@string/errore_di_recupero_dati"
         tools:text="errore recupero dati" />
-
-    <Button
-        android:id="@+id/button_action"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/xlarge_margin"
-        android:filterTouchesWhenObscured="true"
-        android:text="@string/riprova"
-        android:textAllCaps="false"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/text_view_advise"
-        tools:visibility="visible" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

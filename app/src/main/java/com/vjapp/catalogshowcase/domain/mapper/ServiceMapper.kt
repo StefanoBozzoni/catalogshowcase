@@ -70,6 +70,8 @@ class ServiceMapper {
                 SearchTypes.LATEST -> "latest"
                 SearchTypes.LOWEST -> "lowest"
                 SearchTypes.HIGHEST -> "highest"
+                SearchTypes.SEARCHRESULT2 -> "searchresult2"
+                SearchTypes.SEARCHRESULT3 -> "searchresult3"
             }
         }
 
