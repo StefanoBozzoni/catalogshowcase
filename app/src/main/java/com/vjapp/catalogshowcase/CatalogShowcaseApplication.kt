@@ -8,19 +8,23 @@ import localModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+import org.koin.core.module.Module
 import remoteModule
 
-class CatalogShowcaseApplication : Application() {
+open class CatalogShowcaseApplication : Application() {
 
     override fun onCreate() {
         super.onCreate()
 
-        //startKoin(this,listOf(viewModelModule, repositoryModule,
-        //                                   localModule, remoteModule, domainModule), logger= KoinLogger())
-
         startKoin {
             androidLogger()
             androidContext(this@CatalogShowcaseApplication)
-            modules(listOf(viewModelModule, repositoryModule, localModule, remoteModule, domainModule)) }
+            modules(getKoinModuleList())
+        }
+
+    }
+
+    open fun getKoinModuleList():List<Module> {
+        return listOf(viewModelModule, repositoryModule, localModule, remoteModule, domainModule)
     }
 }

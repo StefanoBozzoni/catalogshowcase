@@ -5,6 +5,7 @@ import com.vjapp.catalogshowcase.base.BaseKoinTest
 import com.vjapp.catalogshowcase.data.exceptions.NetworkCommunicationException
 import com.vjapp.catalogshowcase.di.configureTestAppComponent
 import com.vjapp.catalogshowcase.domain.interctor.GetCatalogUseCase
+import com.vjapp.catalogshowcase.domain.model.SearchTypes
 import io.mockk.MockKAnnotations
 import kotlinx.coroutines.runBlocking
 import org.hamcrest.Matchers.*
@@ -40,7 +41,7 @@ class InteractorsTest : BaseKoinTest(){
 
         mockNetworkResponseWithFileContent("catalog_response.json", HttpURLConnection.HTTP_OK)
 
-        val dataReceived = mGetCatalogUseCase.execute()
+        val dataReceived = mGetCatalogUseCase.execute(GetCatalogUseCase.Params(SearchTypes.SEARCHRESULT))
 
         Assert.assertNotNull(dataReceived)
         Assert.assertEquals(dataReceived.catalogList.size, mCount)
@@ -56,7 +57,7 @@ class InteractorsTest : BaseKoinTest(){
 
         //var exception : Exception?=null
         val exception:Exception? = try {
-            val dataReceived = mGetCatalogUseCase.execute()
+            val dataReceived = mGetCatalogUseCase.execute(GetCatalogUseCase.Params(SearchTypes.SEARCHRESULT))
             null
         } catch(e:Exception) {
             e

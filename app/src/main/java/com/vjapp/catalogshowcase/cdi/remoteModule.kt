@@ -14,6 +14,6 @@ val remoteModule = module {
 
     //single { (get("SERVICE_FACTORY") as ServiceFactory).retrofitInstance }
     single(named("APP_SERVICE")) { AppServiceFactory(get(named("HTTP_CLIENT"))).getAppService(get(named("SERVICE_FACTORY"))) }
-    single { RemoteDataSource(get(named("APP_SERVICE"))) as RemoteDataSource }
+    single { RemoteDataSource(get(named("APP_SERVICE")))  }
 
 }

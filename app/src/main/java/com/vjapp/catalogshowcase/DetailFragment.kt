@@ -83,7 +83,7 @@ class DetailFragment : Fragment() {
         }
 
         //fills the color picker
-        product?.colors?.forEachIndexed { index,color->
+        product?.colors?.forEachIndexed { index,_->
             val rgbValue = "#"+product.colors[index].rgb
             val colorRgb = Color.parseColor(rgbValue)
             view?.findViewById<FloatingActionButton>(array_color_fab[index])?.backgroundTintList = ColorStateList.valueOf(colorRgb)

@@ -8,6 +8,7 @@ import com.vjapp.catalogshowcase.domain.interctor.GetCatalogUseCase
 import com.vjapp.catalogshowcase.domain.interctor.GetProductUseCase
 import com.vjapp.catalogshowcase.domain.model.CatalogEntity
 import com.vjapp.catalogshowcase.domain.model.ProductEntity
+import com.vjapp.catalogshowcase.domain.model.SearchTypes
 import com.vjapp.catalogshowcase.presentation.DetailViewModel
 import com.vjapp.catalogshowcase.presentation.MainViewModel
 import com.vjapp.catalogshowcase.presentation.ResourceState
@@ -62,16 +63,16 @@ class ViewModelTests : BaseKoinTest() {
         mMainViewModel = MainViewModel(mgetCatalogUseCase, coroutineTestRule.dispatcher)
         val sampleResponse = getJson("catalog_response.json")
         val jsonObj = Gson().fromJson(sampleResponse, CatalogEntity::class.java)
-        coEvery { mgetCatalogUseCase.execute() } returns jsonObj
+        coEvery { mgetCatalogUseCase.execute(any()) } returns jsonObj
 
         coroutineTestRule.dispatcher.runBlockingTest() {
-            mMainViewModel.getCatalog()
+            mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
             mMainViewModel.getCatalogLiveData.observeOnce() {}
         }
 
-        System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.status?.toString())
+        System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.first?.status?.toString())
         val value = mMainViewModel.getCatalogLiveData.value
-        assert(value?.status == ResourceState.SUCCESS)
+        assert(value?.first?.status == ResourceState.SUCCESS)
     }
 
     @ExperimentalCoroutinesApi
@@ -90,6 +91,5 @@ class ViewModelTests : BaseKoinTest() {
         val value = mDetailViewModel.getProductLiveData.value
         assert(value?.status == ResourceState.SUCCESS)
     }
-
 
 }

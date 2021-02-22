@@ -1,10 +1,12 @@
 package com.example.examplevoidapp
 
+import android.os.SystemClock
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.vjapp.catalogshowcase.base.BaseKoinTest
 import com.vjapp.catalogshowcase.di.configureTestAppComponent
 import com.vjapp.catalogshowcase.domain.interctor.GetCatalogUseCase
 import com.vjapp.catalogshowcase.domain.interctor.GetProductUseCase
+import com.vjapp.catalogshowcase.domain.model.SearchTypes
 import com.vjapp.catalogshowcase.presentation.DetailViewModel
 import com.vjapp.catalogshowcase.presentation.MainViewModel
 import com.vjapp.catalogshowcase.presentation.ResourceState
@@ -70,20 +72,20 @@ class ViewModelTests2 : BaseKoinTest() {
         //coEvery { mgetCatalogUseCase.execute() } returns jsonObj
 
         coroutineTestRule.dispatcher.runBlockingTest() {
-            mMainViewModel.getCatalog()
+            mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
 
             mMainViewModel.getCatalogLiveData.getOrAwaitValue {}
-            while (mMainViewModel.getCatalogLiveData.value?.status == ResourceState.LOADING) {
+            while (mMainViewModel.getCatalogLiveData.value?.first?.status == ResourceState.LOADING) {
                 mMainViewModel.getCatalogLiveData.getOrAwaitValue {}
             }
         }
 
-        System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.status?.toString())
+        System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.first?.status?.toString())
 
         val value = mMainViewModel.getCatalogLiveData.value
-        Assert.assertThat(value?.status, `is`(ResourceState.SUCCESS))
-        Assert.assertThat(value?.data!!.catalogList.size, `is`(40))
-        Assert.assertThat(value.data!!.catalogList[0].cod10.length, greaterThan(0))
+        Assert.assertThat(value?.first?.status, `is`(ResourceState.SUCCESS))
+        Assert.assertThat(value?.first?.data!!.catalogList.size, `is`(40))
+        Assert.assertThat(value.first.data!!.catalogList[0].cod10.length, greaterThan(0))
     }
 
     @ExperimentalCoroutinesApi
@@ -101,18 +103,18 @@ class ViewModelTests2 : BaseKoinTest() {
         //coEvery { mgetCatalogUseCase.execute() } returns jsonObj
 
         coroutineTestRule.dispatcher.runBlockingTest() {
-            mMainViewModel.getCatalog()
+            mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
 
             mMainViewModel.getCatalogLiveData.getOrAwaitValue {}
-            while (mMainViewModel.getCatalogLiveData.value?.status == ResourceState.LOADING) {
+            while (mMainViewModel.getCatalogLiveData.value?.first?.status == ResourceState.LOADING) {
                 mMainViewModel.getCatalogLiveData.getOrAwaitValue {}
             }
         }
 
-        System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.status?.toString())
-
+        System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.first?.status?.toString())
+        SystemClock.sleep(2000)
         val value = mMainViewModel.getCatalogLiveData.value
-        Assert.assertThat(value?.status, `is`(ResourceState.ERROR))
+        Assert.assertThat(value?.first?.status, `is`(ResourceState.ERROR))
     }
 
     @ExperimentalCoroutinesApi

@@ -1,0 +1,355 @@
+{
+  "ImageUrls": {
+    "Normal": [
+      "https://images.yoox.com/13/13115608-COLOR-_13_f.jpg",
+      "https://images.yoox.com/13/13115608-COLOR-_13_r.jpg"
+    ],
+    "Zoom": [
+      "https://images.yoox.com/13/13115608-COLOR-_14_f.jpg",
+      "https://images.yoox.com/13/13115608-COLOR-_14_r.jpg"
+    ],
+    "Soldout": "https://images.yoox.com/13/13115608_13_f.jpg"
+  },
+  "ItemDescriptions": {
+    "SizeInfo": "La taglia corrisponde a quella riportata sull’etichetta.",
+    "ProductInfo": [
+      "Composizione: 100% Lana Vergine",
+      "Dettagli: fresco di lana, logo, tinta unita basic, vita normale, regular fit, gamba dritta, bottoni e gancetto, multitasche, tailored",
+      "Larghezza del fondo: 17 cm",
+      "Codice prodotto: 13115608-COLOR-"
+    ],
+    "BrandInfo": "",
+    "ShippingInfo": {
+      "ShippingCosts": [
+        {
+          "Title": "Spedizione",
+          "Cells": [
+            {
+              "Values": [
+                "Standard"
+              ]
+            },
+            {
+              "Values": [
+                "Express*"
+              ]
+            },
+            {
+              "Values": [
+                "Standard UPS Access Point"
+              ]
+            }
+          ]
+        },
+        {
+          "Title": "Tempi",
+          "Cells": [
+            {
+              "Values": [
+                "Consegna entro 3-5 giorni lavorativi"
+              ]
+            },
+            {
+              "Values": [
+                "Consegna entro 1-2 giorni lavorativi"
+              ]
+            },
+            {
+              "Values": [
+                "Consegna entro 3-5 giorni lavorativi"
+              ]
+            }
+          ]
+        },
+        {
+          "Title": "Costi",
+          "Cells": [
+            {
+              "Values": [
+                "EUR 5,00"
+              ]
+            },
+            {
+              "Values": [
+                "EUR 12,00"
+              ]
+            },
+            {
+              "Values": [
+                "EUR 5,00"
+              ]
+            }
+          ]
+        }
+      ],
+      "ShippingNotes": [
+        {
+          "Title": "",
+          "Notes": [
+            "SPEDIZIONE GRATUITA PER GLI ORDINI SUPERIORI A 150 €",
+            "<br/>*<b>YOOX garantisce la consegna entro 1 giorno lavorativo</b> per ordini effettuati dal lunedì al venerdì prima delle ore 16:30.<br/>I giorni lavorativi sono dal lunedì al venerdì.<br/>Per Basilicata, Campania, Calabria, Puglia e isole la consegna potrebbe richiedere un giorno aggiuntivo."
+          ]
+        },
+        {
+          "Title": "Servizio gratuito di ritiro del reso",
+          "Notes": [
+            "<br/><b>Servizio gratuito di ritiro del reso:</b> <br/><br/>Puoi richiedere il cambio o il reso per qualsiasi prodotto entro <b>14 giorni</b> dalla data di consegna. La rispedizione è facile e veloce grazie all'etichetta di reso prepagata inclusa nel pacco. Trovi maggiori informazioni nella sezione <a href=\"http://help.yoox.com/system/web/custom/hp/topic.jsp?topicId=1023\">Resi e Rimborsi</a>."
+          ]
+        }
+      ]
+    }
+  },
+  "SocialDetails": {
+    "ItemLabel": "PRADA Pantalone",
+    "ItemImageUrl": "https://images.yoox.com/13/13115608-COLOR-_12_f.jpg",
+    "ItemUrl": "https://www.yoox.com/IT/13115608-COLOR-/item?dept=men",
+    "Facebook": {
+      "ItemUrl": "https://www.yoox.com/IT/13115608-COLOR-/item?dept=men&utm_source=facebook_share&utm_medium=referral&utm_campaign=share&tp=39349"
+    },
+    "Twitter": {
+      "ItemUrl": "https://www.yoox.com/IT/13115608-COLOR-/item?dept=men&utm_source=twitter_share&utm_medium=referral&utm_campaign=share&tp=39347"
+    },
+    "Google": {
+      "ItemUrl": "https://www.yoox.com/IT/13115608-COLOR-/item?dept=men&utm_source=gplus_share&utm_medium=referral&utm_campaign=share&tp=42053"
+    },
+    "Pinterest": {
+      "ItemUrl": "https://www.yoox.com/IT/13115608-COLOR-/item?dept=men&utm_source=pinterest_share&utm_medium=referral&utm_campaign=share&tp=39348"
+    }
+  },
+  "RelatedSearches": {
+    "TapCategory": {
+      "Attributes": {
+        "ctgr": [
+          "pntln1"
+        ]
+      },
+      "Department": "men",
+      "Gender": "U",
+      "NumItems": 0
+    },
+    "TapBrand": {
+      "Attributes": {
+        "dsgnrs": [
+          "63"
+        ]
+      },
+      "Department": "men",
+      "Gender": "U",
+      "NumItems": 0
+    }
+  },
+  "CommonFormattedPrices": {
+    "Discounted": {
+      "ValueCent": 51000,
+      "Currency": "EUR"
+    },
+    "Full": {
+      "ValueCent": 51000,
+      "Currency": "EUR"
+    },
+    "Retail": {
+      "ValueCent": 0,
+      "Currency": "EUR"
+    }
+  },
+  "Cod10": "13115608GL",
+  "Department": "men",
+  "Quantity": 10,
+  "Brand": {
+    "Name": "PRADA",
+    "Url": "/it/uomo/shoponline/prada_d#/d=63&dept=men&gender=U",
+    "Rel": "/it/uomo/shoponline/prada_d#/d=63&dept=men&gender=U",
+    "Attributes": {
+      "dsgnrs": [
+        "PRADA"
+      ]
+    }
+  },
+  "BrandId": 63,
+  "Category": {
+    "Name": "Pantalone",
+    "Url": "/it/uomo/shoponline#/c=358&dept=men&gender=U",
+    "Rel": "/it/uomo/shoponline?c=358&dept=men&gender=U",
+    "Attributes": {
+      "ctgr": [
+        "pntln1"
+      ]
+    }
+  },
+  "Title": {
+    "Attributes": {}
+  },
+  "MacroCategory": "Pantaloni",
+  "MicroCategoryPlural": "Pantaloni",
+  "Author": {
+    "Attributes": {}
+  },
+  "Price": {
+    "FullPrice": 510,
+    "DiscountedPrice": 510,
+    "RetailPrice": 0,
+    "DiscountedPriceEur": 510
+  },
+  "FormattedPrice": {
+    "FullPrice": "EUR 510,00",
+    "DiscountedPrice": "EUR 510,00",
+    "RetailPrice": "EUR 0,00"
+  },
+  "HasInfoPrice": true,
+  "HasCustomInfoPriceLayer": false,
+  "Colors": [
+    {
+      "ColorId": 7,
+      "ColorCode": "GL",
+      "Code10": "13115608GL",
+      "Name": "Nero",
+      "Rgb": "000000"
+    },
+    {
+      "ColorId": 25,
+      "ColorCode": "FH",
+      "Code10": "13115608FH",
+      "Name": "Grigio",
+      "Rgb": "8B949C"
+    },
+    {
+      "ColorId": 36,
+      "ColorCode": "OA",
+      "Code10": "13115608OA",
+      "Name": "Antracite",
+      "Rgb": "55595D"
+    }
+  ],
+  "Sizes": [
+    {
+      "Id": 2,
+      "Name": "46",
+      "IsoTwoLetterCountryCode": "IT",
+      "DefaultSizeLabel": "46 (IT)",
+      "AlternativeSizeLabel": ""
+    },
+    {
+      "Id": 3,
+      "Name": "48",
+      "IsoTwoLetterCountryCode": "IT",
+      "DefaultSizeLabel": "48 (IT)",
+      "AlternativeSizeLabel": ""
+    },
+    {
+      "Id": 4,
+      "Name": "50",
+      "IsoTwoLetterCountryCode": "IT",
+      "DefaultSizeLabel": "50 (IT)",
+      "AlternativeSizeLabel": ""
+    },
+    {
+      "Id": 5,
+      "Name": "52",
+      "IsoTwoLetterCountryCode": "IT",
+      "DefaultSizeLabel": "52 (IT)",
+      "AlternativeSizeLabel": ""
+    }
+  ],
+  "HasValidSizes": true,
+  "HasValidColors": true,
+  "HasFastDelivery": false,
+  "ColorSizeQty": [
+    {
+      "ColorCode": "GL",
+      "SizeId": 2,
+      "Quantity": 1
+    },
+    {
+      "ColorCode": "GL",
+      "SizeId": 3,
+      "Quantity": 1
+    },
+    {
+      "ColorCode": "FH",
+      "SizeId": 2,
+      "Quantity": 1
+    },
+    {
+      "ColorCode": "FH",
+      "SizeId": 3,
+      "Quantity": 2
+    },
+    {
+      "ColorCode": "FH",
+      "SizeId": 4,
+      "Quantity": 2
+    },
+    {
+      "ColorCode": "FH",
+      "SizeId": 5,
+      "Quantity": 1
+    },
+    {
+      "ColorCode": "OA",
+      "SizeId": 2,
+      "Quantity": 1
+    },
+    {
+      "ColorCode": "OA",
+      "SizeId": 3,
+      "Quantity": 1
+    }
+  ],
+  "Wearability": "",
+  "HasProposition65": false,
+  "RemoteWarehouse": "",
+  "IsSoldOut": false,
+  "IsFinalSale": false,
+  "IsBaby": false,
+  "IsPets": false,
+  "IsLiquid": false,
+  "IsBook": false,
+  "IsDenim": false,
+  "IsSunglassHut": false,
+  "IsArt": false,
+  "ShowSizeGuide": true,
+  "ItemSizeGuideRequest": {
+    "SizeTypeId": 986,
+    "Gender": "U",
+    "BrandId": 63,
+    "MacroCategoryId": 36,
+    "Dept": "men"
+  },
+  "Season": "P",
+  "SaleLine": "",
+  "SalesLineId": "",
+  "IsArteria": false,
+  "Currency": "EUR",
+  "MicroCategoryAttribute": {
+    "Url": {
+      "Path": "/it/uomo/shoponline/pantaloni_c",
+      "SeoFriendlyPathWithQueryString": "/it/uomo/shoponline/pantaloni_c?dept=men&gender=U&attributes=%7b%27ctgr%27%3a%5b%27pntln1%27%5d%7d",
+      "SeoFriendlyPathWithHash": "/it/uomo/shoponline/pantaloni_c#/dept=men&gender=U&attributes=%7b%27ctgr%27%3a%5b%27pntln1%27%5d%7d"
+    },
+    "Code": "pntln1",
+    "SingleDescr": "Pantalone",
+    "PluralDescr": "Pantaloni"
+  },
+  "MacroCategoryAttribute": {
+    "Url": {
+      "Path": "/it/uomo/shoponline/pantaloni_mc",
+      "SeoFriendlyPath": "/it/uomo/shoponline/pantaloni_mc",
+      "PathWithHash": "/it/uomo/shoponline/pantaloni_mc#/dept=men&gender=U&attributes=%7b%27ctgr%27%3a%5b%27pntln%27%5d%7d",
+      "SeoFriendlyPathWithQueryString": "/it/uomo/shoponline/pantaloni_mc?dept=men&gender=U&attributes=%7b%27ctgr%27%3a%5b%27pntln%27%5d%7d",
+      "SeoFriendlyPathWithHash": "/it/uomo/shoponline/pantaloni_mc#/dept=men&gender=U&attributes=%7b%27ctgr%27%3a%5b%27pntln%27%5d%7d",
+      "QueryString": "dept=men&gender=U&attributes=%7b%27ctgr%27%3a%5b%27pntln%27%5d%7d"
+    },
+    "Code": "pntln",
+    "SingleDescr": "Pantaloni",
+    "PluralDescr": "Pantaloni"
+  },
+  "Composition": {
+    "Name": "Composition",
+    "Value": "100% Lana Vergine"
+  },
+  "BreadcrumbsUrl": "/YOOX_IT/Breadcrumbs/IndexItem?isoCode=IT&brand=%7b%22Id%22%3a%2263%22%2c%22Name%22%3a%22PRADA%22%2c%22Url%22%3a%22%2fit%2fuomo%2fshoponline%2fprada_d%23%2fd%3d63%26dept%3dmen%26gender%3dU%22%2c%22Rel%22%3a%22%2fit%2fuomo%2fshoponline%2fprada_d%23%2fd%3d63%26dept%3dmen%26gender%3dU%22%2c%22Attributes%22%3a%7b%22dsgnrs%22%3a%5b%22PRADA%22%5d%7d%7d&macroCategory=%7b%22Value%22%3anull%2c%22Code%22%3a%22pntln%22%2c%22SingleDescr%22%3a%22Pantaloni%22%2c%22PluralDescr%22%3a%22Pantaloni%22%7d&microCategory=%7b%22Value%22%3anull%2c%22Code%22%3a%22pntln1%22%2c%22SingleDescr%22%3a%22Pantalone%22%2c%22PluralDescr%22%3a%22Pantaloni%22%7d",
+  "ShowRetailPrice": false,
+  "HasToRenderDesignArtInfo": false,
+  "IsOneSize": false,
+  "ErrorCode": 0
+}

@@ -2,13 +2,18 @@ package com.vjapp.catalogshowcase.base
 
 import com.vjapp.catalogshowcase.utils.CoroutineTestRule
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import okhttp3.OkHttp
 import okhttp3.mockwebserver.MockResponse
 import okhttp3.mockwebserver.MockWebServer
-import org.junit.*
+import org.junit.After
+import org.junit.Before
+import org.junit.Rule
 import org.koin.core.context.stopKoin
 import org.koin.test.AutoCloseKoinTest
-import org.koin.test.KoinTest
 import java.io.File
+import java.util.logging.Level
+import java.util.logging.Logger
+
 
 abstract class BaseKoinTest : AutoCloseKoinTest() {
 
@@ -78,7 +83,10 @@ abstract class BaseKoinTest : AutoCloseKoinTest() {
         if (shouldStart) {
             mShouldStart = shouldStart
             mMockServerInstance = MockWebServer()
-            mMockServerInstance.start()
+            Logger.getLogger(MockWebServer::class.java.name).level = Level.OFF
+            Logger.getLogger(OkHttp::class.java.name).setLevel(Level.OFF)
+
+            mMockServerInstance.startSilently()
         }
     }
 
@@ -87,4 +95,11 @@ abstract class BaseKoinTest : AutoCloseKoinTest() {
      */
     fun getMockWebServerUrl() = mMockServerInstance.url("/").toString()
 
+    fun MockWebServer.startSilently() {
+        Logger.getLogger(this::class.java.name).level = Level.OFF
+        start()
+    }
+
 }
+
+
