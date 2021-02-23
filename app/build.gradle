@@ -83,9 +83,9 @@ dependencies {
     api "com.squareup.retrofit2:converter-gson:${libVersions.retrofit}"
     api "com.squareup.retrofit2:converter-scalars:${libVersions.retrofit}"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    //implementation 'androidx.navigation:navigation-fragment:2.3.3'
+    implementation 'androidx.navigation:navigation-fragment:2.3.3'
     //implementation 'androidx.navigation:navigation-ui:2.3.3'
-    //implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
     //implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
     implementation 'com.squareup.picasso:picasso:2.71828'
 
