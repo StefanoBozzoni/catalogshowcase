@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <androidx.fragment.app.FragmentContainerView
+    <fragment
             android:id="@+id/searchFragment"
             android:name="com.vjapp.catalogshowcase.CatalogSearchFragment"
             android:layout_width="match_parent"

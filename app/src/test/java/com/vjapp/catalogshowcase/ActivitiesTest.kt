@@ -3,7 +3,6 @@ package com.vjapp.catalogshowcase
 import android.content.pm.ActivityInfo
 import android.net.Uri
 import android.os.Build.VERSION_CODES.O
-import android.os.Looper.getMainLooper
 import android.widget.TextView
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.fragment.app.Fragment
@@ -21,10 +20,7 @@ import org.junit.Test
 import org.junit.runner.RunWith
 import org.koin.test.AutoCloseKoinTest
 import org.mockito.ArgumentMatchers.nullable
-import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
-import org.robolectric.annotation.LooperMode
-import org.robolectric.shadows.ShadowLooper
 import java.io.File
 
 /*
@@ -34,7 +30,7 @@ import java.io.File
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [O])
 //@LooperMode(LooperMode.Mode.PAUSED)
-class ActivitiesTest: AutoCloseKoinTest() {
+class ActivitiesTest : AutoCloseKoinTest() {
 
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
@@ -45,12 +41,12 @@ class ActivitiesTest: AutoCloseKoinTest() {
     }
 
     @Test
-    fun activity_CatalogSearch()  {
+    fun activity_CatalogSearch() {
         //scenario.recreate()
         //val picasso = Picasso.Builder(this).build()
-        val picasso:Picasso = mockk(relaxed = true)
+        val picasso: Picasso = mockk(relaxed = true)
         Picasso.setSingletonInstance(picasso)
-        val requestCreator:RequestCreator = mockk(relaxed = true)
+        val requestCreator: RequestCreator = mockk(relaxed = true)
         every { Picasso.get().load(nullable(String::class.java)) } returns requestCreator
         every { picasso.load(nullable(Uri::class.java)) } returns requestCreator
         every { picasso.load(nullable(File::class.java)) } returns requestCreator
@@ -65,7 +61,7 @@ class ActivitiesTest: AutoCloseKoinTest() {
     }
 
     @Test
-    fun activity_Detail()  {
+    fun activity_Detail() {
         val scenario = launchActivity<DetailActivity>()
 
         scenario.recreate()
@@ -91,7 +87,7 @@ class ActivitiesTest: AutoCloseKoinTest() {
                 System.out.println(mFragment.choosenColor)
 
 
-                assert(mFragment.choosenColor==0 && activity != null && tvPrice.text!="EUR 510,00")
+                assert(mFragment.choosenColor == 0 && activity != null && tvPrice.text != "EUR 510,00")
 
             }
         }
