@@ -1,26 +1,39 @@
 package com.vjapp.catalogshowcase
 
 import android.os.SystemClock
-import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.fragment.app.testing.launchFragment
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.RecyclerView
 import androidx.test.core.app.ActivityScenario.launch
+import androidx.test.core.app.ApplicationProvider
+import androidx.test.espresso.Espresso
+import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
-import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
-import androidx.test.espresso.matcher.ViewMatchers.withId
+import androidx.test.espresso.contrib.RecyclerViewActions.scrollToPosition
+import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.vjapp.catalogshowcase.adapters.CatalogAdapter
 import com.vjapp.catalogshowcase.base.BaseKoinInstrumentedTest
 import com.vjapp.catalogshowcase.di.configureEspressoTestAppComponent
-import junit.framework.Assert.assertTrue
+import com.vjapp.catalogshowcase.domain.model.CatalogEntity
+import com.vjapp.catalogshowcase.domain.model.CatalogItemEntity
+import com.vjapp.catalogshowcase.utils.RecyclerViewHasTextAtPositionAssertion
+import com.vjapp.catalogshowcase.utils.RecyclerViewItemCountAssertion
+import com.vjapp.catalogshowcase.utils.waitUntilLoaded
+import org.hamcrest.CoreMatchers
+import org.hamcrest.Matchers
+import org.hamcrest.Matchers.*
 import org.junit.Before
-import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.loadKoinModules
+import org.koin.core.context.startKoin
+import org.koin.core.context.stopKoin
 import java.net.HttpURLConnection
+
 
 /**
  * Instrumented test, which will execute on an Android device.
@@ -28,43 +41,78 @@ import java.net.HttpURLConnection
  * See [testing documentation](http://d.android.com/tools/testing).
  */
 @RunWith(AndroidJUnit4::class)
-//@Config(sdk = [Build.VERSION_CODES.O])
 class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
-
-    /*
-    @Rule
-    @JvmField
-    val instantTaskExecutorRule = InstantTaskExecutorRule()
-   */
 
     @Before
     fun start(){
-        //mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_OK)
         super.setUp()
-        loadKoinModules(configureEspressoTestAppComponent(getMockWebServerUrl()).toMutableList())
+        stopKoin() // to remove 'A Koin Application has already been started'
+        startKoin {
+            androidContext(ApplicationProvider.getApplicationContext())
+            loadKoinModules(configureEspressoTestAppComponent(getMockWebServerUrl()).toMutableList())
+        }
     }
 
     @Test
-    fun ActivityInstrumentedTest() {
-        //mockNetworkResponseWithFileContent("catalog_response.json", HttpURLConnection.HTTP_OK)
+    fun ActivityCatalogSearchAndDetailTest() {
+
         mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_OK)
 
         val scenario =launch(CatalogSearchActivity::class.java) //equivalent to launchactivity java
-        SystemClock.sleep(3000)
+        SystemClock.sleep(1000) //wait for the mockwebserve to come up
+
+        onView(withId(R.id.nav_view)).check(matches(isDisplayed()))  //La bottom bar è visibile
+
+        var rvCatalog :RecyclerView? = null
+        scenario.onActivity { activity->
+            rvCatalog =  activity.findViewById(R.id.rv_catalog_list)
+        }
+        waitUntilLoaded { rvCatalog!! }
+
+        onView(withId(R.id.rv_catalog_list)).check(RecyclerViewItemCountAssertion(40))
+        System.out.println("click on a button")
+
+        onView(withId(R.id.navigation_highest)).perform(click())
+        waitUntilLoaded { rvCatalog!! }
+        SystemClock.sleep(1000) //wait , we can't use waitUntilLoaded here because it works only at first loaded layout
+
+        onView(withId(R.id.rv_catalog_list)).check(RecyclerViewHasTextAtPositionAssertion(2,"Tappeto"))
+        onView(withId(R.id.rv_catalog_list))
+            .perform(RecyclerViewActions
+            .actionOnItemAtPosition<CatalogAdapter.ListViewHolder>(2, click()));
+
+        onView(withId(R.id.ivProductItem)).check((matches((isDisplayed()))))
+
+    }
+
+    @Test
+    fun DetailActivityTest() {
+        mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_OK)
+
+        val scenario =launch(DetailActivity::class.java) //equivalent to launchactivity java
+        SystemClock.sleep(3000) //wait for the mockwebserve to come up
+
+        onView(withId(R.id.tvPrice)).check((matches((isDisplayed()))))
+        onView(withId(R.id.tvPrice)).check(matches(withText("EUR 510,00")))
+
+        onView(withId(R.id.spSizes)).perform(click());
+        onData(anything()).atPosition(1).perform(click());
+        onView(withId(R.id.spSizes)).check(matches(withSpinnerText(containsString("48"))));
+
+        onView(withId(R.id.fab_color_1)).perform(click())
 
         scenario.onActivity { activity->
-            //onView(withId(R.id.nav_view)).check(matches(isDisplayed()))
-            //val scenario = launchFragment(null,CatalogSearchFragment::class.java)
-            //onView(withId(R.id.rv_catalog_list)).perform(RecyclerViewActions.actionOnItemAtPosition<CatalogAdapter.ListViewHolder>(1, click()))
-            //SystemClock.sleep(2000)
-            //assertTrue(activity!=null)
-            //onView(withId(R.id.nav_view)).check(matches(isDisplayed()))
-        }
-        onView(withId(R.id.nav_view)).check(matches(isDisplayed()))
-        onView(withId(R.id.rv_catalog_list)).perform(RecyclerViewActions.actionOnItemAtPosition<CatalogAdapter.ListViewHolder>(1, click()))
+            val fragmentList: List<Fragment> = activity.getSupportFragmentManager().getFragments()
+            var mFragment: DetailFragment? = null
+            if (fragmentList[0] is DetailFragment) {
+                mFragment = fragmentList[0] as DetailFragment
 
-        //onView(withId(R.id.button_first)).perform(click())
+                assert(mFragment.choosenColor==0 && activity != null)
+            }
+        }
+
     }
+
 
 
 }

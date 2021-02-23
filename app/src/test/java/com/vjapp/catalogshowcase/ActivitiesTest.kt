@@ -33,7 +33,7 @@ import java.io.File
  */
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [O])
-@LooperMode(LooperMode.Mode.PAUSED)
+//@LooperMode(LooperMode.Mode.PAUSED)
 class ActivitiesTest: AutoCloseKoinTest() {
 
     @get:Rule
@@ -57,10 +57,10 @@ class ActivitiesTest: AutoCloseKoinTest() {
 
         // GIVEN
         val scenario = launchActivity<CatalogSearchActivity>()
-        shadowOf(getMainLooper()).idle()
-        ShadowLooper.runMainLooperOneTask()
+        //shadowOf(getMainLooper()).idle()
+        //ShadowLooper.runMainLooperOneTask()
 
-        Thread.sleep(10000)
+        Thread.sleep(3000)
         scenario.onActivity { activity -> assert(activity != null) }
     }
 
@@ -85,7 +85,7 @@ class ActivitiesTest: AutoCloseKoinTest() {
             if (fragmentList[0] is DetailFragment) {
                 mFragment = fragmentList[0] as DetailFragment
 
-                shadowOf(getMainLooper()).idle()
+                //shadowOf(getMainLooper()).idle()
 
                 System.out.println(mFragment.javaClass.simpleName)
                 System.out.println(mFragment.choosenColor)

@@ -67,7 +67,7 @@ class ServiceMapper {
         fun mapOrderType(orderType: SearchTypes): String {
             return when (orderType) {
                 SearchTypes.SEARCHRESULT -> "searchresult"
-                SearchTypes.LATEST -> "latest"
+                SearchTypes.LATEST -> "latesthighest"
                 SearchTypes.LOWEST -> "lowest"
                 SearchTypes.HIGHEST -> "highest"
                 SearchTypes.SEARCHRESULT2 -> "searchresult2"

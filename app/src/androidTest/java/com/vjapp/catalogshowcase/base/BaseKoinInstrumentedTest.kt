@@ -43,6 +43,7 @@ abstract class BaseKoinInstrumentedTest : KoinTest {
                 when (request.path) {
                     "/v1/searchresult" -> return MockResponse().setResponseCode(responseCode).setBody(getJson("catalog_response.json"))
                     "/v1/item" -> return MockResponse().setResponseCode(responseCode).setBody(getJson("product_response.json"))
+                    "/v1/highest" -> return MockResponse().setResponseCode(responseCode).setBody(getJson("catalog_response_highest.json"))
                 }
                 return MockResponse().setResponseCode(HttpURLConnection.HTTP_NOT_FOUND)
             }

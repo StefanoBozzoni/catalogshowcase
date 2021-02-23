@@ -16,8 +16,8 @@ class MainViewModel(private val getCatalogUseCase: GetCatalogUseCase, private va
     fun getCatalog(searchType: SearchTypes, operationType: OperationType =OperationType.REPLACE_LIST) {
         viewModelScope.launch(coroutineDispatcher) {
             try {
+                getCatalogLiveData.postValue(Pair(Resource.loading(), operationType))
                 coroutineScope {
-                    getCatalogLiveData.postValue(Pair(Resource.loading(), operationType))
                     val catalog =
                         async { getCatalogUseCase.execute(GetCatalogUseCase.Params(searchType)) }.await()
                     getCatalogLiveData.postValue(Pair(Resource.success(catalog), operationType))

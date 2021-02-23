@@ -5,7 +5,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:foreground="?android:attr/selectableItemBackgroundBorderless"
-        android:layout_margin="@dimen/medium_margin">
+        android:layout_margin="@dimen/small_margin">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -28,6 +28,7 @@
                 android:id="@+id/tvCategory"
                 style="@style/Base.Labels.PrimaryColor"
                 android:layout_width="0dp"
+                android:textColor="@color/blue_grey_900"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/guideline2"
@@ -38,6 +39,7 @@
                 android:id="@+id/tvBrand"
                 style="@style/Base.Labels.PrimaryColor"
                 android:layout_width="0dp"
+                android:textColor="@color/blue_grey_900"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/large_margin"
                 android:maxLines="2"
@@ -50,6 +52,7 @@
                 android:id="@+id/tvPrice"
                 style="@style/Base.Labels.PrimaryColor"
                 android:layout_width="0dp"
+                android:textColor="@color/cyan_900"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/large_margin"
                 app:layout_constraintEnd_toEndOf="parent"

@@ -1,0 +1,1393 @@
+{
+    "SearchResultTitle": "UOMO",
+    "Items": [
+        {
+            "Cod10": "58012250ER",
+            "Brand": "MEMPHIS MILANO",
+            "BrandId": 6621,
+            "Title": "Kyoto\r\n",
+            "Author": "Shiro Kuramata",
+            "MicroCategoryCode": "tvln",
+            "MicroCategory": "Tavolino",
+            "MicroCategoryPlural": "Tavolini",
+            "MacroCategoryCode": "rrdmnt",
+            "MacroCategory": "Arredi",
+            "MacroCategoryPlural": "Arredi",
+            "FullPrice": 5390,
+            "DiscountedPrice": 5390,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58012250ER",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 5.390,00",
+            "FormattedDiscountedPrice": "EUR 5.390,00",
+            "DiscountedPriceEur": 5390,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58007193WF",
+            "Brand": "MEMPHIS MILANO",
+            "BrandId": 6621,
+            "Title": "California\t\r\n",
+            "Author": "Nathalie du Pasquier",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 5200,
+            "DiscountedPrice": 5200,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58007193WF",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "46",
+            "FormattedFullPrice": "EUR 5.200,00",
+            "FormattedDiscountedPrice": "EUR 5.200,00",
+            "DiscountedPriceEur": 5200,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58002776LK",
+            "Brand": "POST DESIGN",
+            "BrandId": 6622,
+            "Title": "RW 07",
+            "Author": "Richard Woods",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 4892,
+            "DiscountedPrice": 4892,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58002776LK",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 4.892,00",
+            "FormattedDiscountedPrice": "EUR 4.892,00",
+            "DiscountedPriceEur": 4892,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58001777KU",
+            "Brand": "MEMPHIS MILANO",
+            "BrandId": 6621,
+            "Title": "Murmansk",
+            "Author": "Ettore Sottsass",
+            "MicroCategoryCode": "cntrtvl",
+            "MicroCategory": "Centrotavola e Vassoi",
+            "MicroCategoryPlural": "Centrotavola e Vassoi",
+            "MacroCategoryCode": "tvlccn",
+            "MacroCategory": "Tavola",
+            "MacroCategoryPlural": "Tavola",
+            "FullPrice": 4790,
+            "DiscountedPrice": 4790,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 28,
+                    "Cod10": "58001777KU",
+                    "Description": "Argento",
+                    "Rgb": "ABB2BA"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "46",
+            "FormattedFullPrice": "EUR 4.790,00",
+            "FormattedDiscountedPrice": "EUR 4.790,00",
+            "DiscountedPriceEur": 4790,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58009039DS",
+            "Brand": "MEMPHIS MILANO",
+            "BrandId": 6621,
+            "Title": "Alcor",
+            "Author": "Ettore Sottsass",
+            "MicroCategoryCode": "vs",
+            "MicroCategory": "Vaso",
+            "MicroCategoryPlural": "Vasi",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 4680,
+            "DiscountedPrice": 4680,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58009039DS",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 4.680,00",
+            "FormattedDiscountedPrice": "EUR 4.680,00",
+            "DiscountedPriceEur": 4680,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58037910AQ",
+            "Brand": "MEMPHIS MILANO",
+            "BrandId": 6621,
+            "Title": "sirio\r\n",
+            "Author": "Ettore Sottsass",
+            "MicroCategoryCode": "vs",
+            "MicroCategory": "Vaso",
+            "MicroCategoryPlural": "Vasi",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 4370,
+            "DiscountedPrice": 4370,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58037910AQ",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "46",
+            "FormattedFullPrice": "EUR 4.370,00",
+            "FormattedDiscountedPrice": "EUR 4.370,00",
+            "DiscountedPriceEur": 4370,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58019891VJ",
+            "Brand": "FORNASETTI",
+            "BrandId": 9690,
+            "Title": "Lux Gstaad",
+            "Author": "Fornasetti",
+            "MicroCategoryCode": "sdt",
+            "MicroCategory": "Seduta",
+            "MicroCategoryPlural": "Sedute",
+            "MacroCategoryCode": "rrdmnt",
+            "MacroCategory": "Arredi",
+            "MacroCategoryPlural": "Arredi",
+            "AlternativeMicro": "Sedia",
+            "FullPrice": 4200,
+            "DiscountedPrice": 4200,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58019891VJ",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "2387",
+            "FormattedFullPrice": "EUR 4.200,00",
+            "FormattedDiscountedPrice": "EUR 4.200,00",
+            "DiscountedPriceEur": 4200,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58019892HO",
+            "Brand": "FORNASETTI",
+            "BrandId": 9690,
+            "Title": "Lux Gstaad",
+            "Author": "Fornasetti",
+            "MicroCategoryCode": "sdt",
+            "MicroCategory": "Seduta",
+            "MicroCategoryPlural": "Sedute",
+            "MacroCategoryCode": "rrdmnt",
+            "MacroCategory": "Arredi",
+            "MacroCategoryPlural": "Arredi",
+            "AlternativeMicro": "Sedia",
+            "FullPrice": 4200,
+            "DiscountedPrice": 4200,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "58019892HO",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 4.200,00",
+            "FormattedDiscountedPrice": "EUR 4.200,00",
+            "DiscountedPriceEur": 4200,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41773685CN",
+            "Brand": "THOM BROWNE",
+            "BrandId": 5361,
+            "Author": "",
+            "MicroCategoryCode": "cpptt",
+            "MicroCategory": "Cappotto",
+            "MicroCategoryPlural": "Cappotti",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 4700,
+            "DiscountedPrice": 4183,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "48"
+                },
+                {
+                    "Text": "50"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 36,
+                    "Cod10": "41773685CN",
+                    "Description": "Antracite",
+                    "Rgb": "55595D"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "1390",
+            "FormattedFullPrice": "EUR 4.700,00",
+            "FormattedDiscountedPrice": "EUR 4.183,00",
+            "DiscountedPriceEur": 4183,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58011427FV",
+            "Brand": "NANIMARQUINA",
+            "BrandId": 24051,
+            "Author": "",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 3935,
+            "DiscountedPrice": 3935,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58011427FV",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "1509",
+            "FormattedFullPrice": "EUR 3.935,00",
+            "FormattedDiscountedPrice": "EUR 3.935,00",
+            "DiscountedPriceEur": 3935,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58009038TT",
+            "Brand": "MEMPHIS MILANO",
+            "BrandId": 6621,
+            "Title": "Alioth",
+            "Author": "Ettore Sottsass",
+            "MicroCategoryCode": "vs",
+            "MicroCategory": "Vaso",
+            "MicroCategoryPlural": "Vasi",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 3850,
+            "DiscountedPrice": 3850,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58009038TT",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 3.850,00",
+            "FormattedDiscountedPrice": "EUR 3.850,00",
+            "DiscountedPriceEur": 3850,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58001822GM",
+            "Brand": "POST DESIGN",
+            "BrandId": 6622,
+            "Title": "N D P 5",
+            "Author": "Nathalie du Pasquier",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 3609,
+            "DiscountedPrice": 3609,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58001822GM",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 3.609,00",
+            "FormattedDiscountedPrice": "EUR 3.609,00",
+            "DiscountedPriceEur": 3609,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41752397CM",
+            "Brand": "DUNHILL",
+            "BrandId": 7924,
+            "Author": "",
+            "MicroCategoryCode": "bmbr1",
+            "MicroCategory": "Bomber",
+            "MicroCategoryPlural": "Bomber",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 3200,
+            "DiscountedPrice": 3200,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "48"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 38,
+                    "Cod10": "41752397CM",
+                    "Description": "Verde scuro",
+                    "Rgb": "31574C"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "",
+            "FormattedFullPrice": "EUR 3.200,00",
+            "FormattedDiscountedPrice": "EUR 3.200,00",
+            "DiscountedPriceEur": 3200,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58011539PS",
+            "Brand": "MEMPHIS MILANO",
+            "BrandId": 6621,
+            "Title": "ALDEBARAN",
+            "Author": "Ettore Sottsass",
+            "MicroCategoryCode": "vs",
+            "MicroCategory": "Vaso",
+            "MicroCategoryPlural": "Vasi",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 3180,
+            "DiscountedPrice": 3180,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58011539PS",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 3.180,00",
+            "FormattedDiscountedPrice": "EUR 3.180,00",
+            "DiscountedPriceEur": 3180,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41683213XR",
+            "Brand": "VERSACE",
+            "BrandId": 1889,
+            "Author": "",
+            "MicroCategoryCode": "bkr1",
+            "MicroCategory": "Biker",
+            "MicroCategoryPlural": "Biker",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 3116,
+            "DiscountedPrice": 3116,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "48"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "41683213XR",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "60",
+            "FormattedFullPrice": "EUR 3.116,00",
+            "FormattedDiscountedPrice": "EUR 3.116,00",
+            "DiscountedPriceEur": 3116,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58031555BM",
+            "Brand": "ANGLEPOISE",
+            "BrandId": 36735,
+            "Title": "Original 1227    \r\n",
+            "Author": "",
+            "MicroCategoryCode": "lmpddtrr",
+            "MicroCategory": "Lampada da terra",
+            "MicroCategoryPlural": "Lampade da terra",
+            "MacroCategoryCode": "llmnzn",
+            "MacroCategory": "Illuminazione",
+            "MacroCategoryPlural": "Illuminazione",
+            "FullPrice": 3000,
+            "DiscountedPrice": 3000,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "58031555BM",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                },
+                {
+                    "Id": 20,
+                    "Cod10": "58031555HU",
+                    "Description": "Blu scuro",
+                    "Rgb": "3A476D"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "46",
+            "FormattedFullPrice": "EUR 3.000,00",
+            "FormattedDiscountedPrice": "EUR 3.000,00",
+            "DiscountedPriceEur": 3000,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41747667NQ",
+            "Brand": "VALENTINO",
+            "BrandId": 112,
+            "Author": "",
+            "MicroCategoryCode": "sprbt",
+            "MicroCategory": "Soprabito",
+            "MicroCategoryPlural": "Soprabiti",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2950,
+            "DiscountedPrice": 2950,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "46"
+                },
+                {
+                    "Text": "48"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 24,
+                    "Cod10": "41747667NQ",
+                    "Description": "Verde militare",
+                    "Rgb": "5A5C35"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "65",
+            "FormattedFullPrice": "EUR 2.950,00",
+            "FormattedDiscountedPrice": "EUR 2.950,00",
+            "DiscountedPriceEur": 2950,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58012597BL",
+            "Brand": "ARTEMIDE",
+            "BrandId": 25318,
+            "Title": "COPERNICO",
+            "Author": "Carlotta de Bevilacqua e Paolo Dell'Elce",
+            "MicroCategoryCode": "lmpdsspn",
+            "MicroCategory": "Lampada a sospensione",
+            "MicroCategoryPlural": "Lampade a sospensione",
+            "MacroCategoryCode": "llmnzn",
+            "MacroCategory": "Illuminazione",
+            "MacroCategoryPlural": "Illuminazione",
+            "FullPrice": 2850,
+            "DiscountedPrice": 2850,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "58012597BL",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "2387",
+            "FormattedFullPrice": "EUR 2.850,00",
+            "FormattedDiscountedPrice": "EUR 2.850,00",
+            "DiscountedPriceEur": 2850,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58016079RH",
+            "Brand": "NANIMARQUINA",
+            "BrandId": 24051,
+            "Title": "Medina 2\r\n",
+            "Author": "",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 2782,
+            "DiscountedPrice": 2782,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58016079RH",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "1509",
+            "FormattedFullPrice": "EUR 2.782,00",
+            "FormattedDiscountedPrice": "EUR 2.782,00",
+            "DiscountedPriceEur": 2782,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41781026UF",
+            "Brand": "VERSACE",
+            "BrandId": 1889,
+            "Author": "",
+            "MicroCategoryCode": "bkr1",
+            "MicroCategory": "Biker",
+            "MicroCategoryPlural": "Biker",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2750,
+            "DiscountedPrice": 2750,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "50"
+                },
+                {
+                    "Text": "52"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 20,
+                    "Cod10": "41781026UF",
+                    "Description": "Blu scuro",
+                    "Rgb": "3A476D"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "65",
+            "FormattedFullPrice": "EUR 2.750,00",
+            "FormattedDiscountedPrice": "EUR 2.750,00",
+            "DiscountedPriceEur": 2750,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58035668CP",
+            "Brand": "NANIMARQUINA",
+            "BrandId": 24051,
+            "Title": "LATTICE\r\n",
+            "Author": "",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 2722,
+            "DiscountedPrice": 2722,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58035668CP",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "1509",
+            "FormattedFullPrice": "EUR 2.722,00",
+            "FormattedDiscountedPrice": "EUR 2.722,00",
+            "DiscountedPriceEur": 2722,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58012755EV",
+            "Brand": "ARTEMIDE",
+            "BrandId": 25318,
+            "Title": "COPERNICO",
+            "Author": "Carlotta de Bevilacqua e Paolo Dell'Elce",
+            "MicroCategoryCode": "lmpdsspn",
+            "MicroCategory": "Lampada a sospensione",
+            "MicroCategoryPlural": "Lampade a sospensione",
+            "MacroCategoryCode": "llmnzn",
+            "MacroCategory": "Illuminazione",
+            "MacroCategoryPlural": "Illuminazione",
+            "FullPrice": 2720,
+            "DiscountedPrice": 2720,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58012755EV",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "2387",
+            "FormattedFullPrice": "EUR 2.720,00",
+            "FormattedDiscountedPrice": "EUR 2.720,00",
+            "DiscountedPriceEur": 2720,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41763463GF",
+            "Brand": "VERSACE",
+            "BrandId": 1889,
+            "Author": "",
+            "MicroCategoryCode": "bkr1",
+            "MicroCategory": "Biker",
+            "MicroCategoryPlural": "Biker",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2700,
+            "DiscountedPrice": 2700,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "52"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "41763463GF",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "1685",
+            "FormattedFullPrice": "EUR 2.700,00",
+            "FormattedDiscountedPrice": "EUR 2.700,00",
+            "DiscountedPriceEur": 2700,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58031265GO",
+            "Brand": "&TRADITION",
+            "BrandId": 13765,
+            "Title": "The Moor\r\n",
+            "Author": "",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 2700,
+            "DiscountedPrice": 2700,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 18,
+                    "Cod10": "58031265GO",
+                    "Description": "Blu",
+                    "Rgb": "214377"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 2.700,00",
+            "FormattedDiscountedPrice": "EUR 2.700,00",
+            "DiscountedPriceEur": 2700,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58019890WJ",
+            "Brand": "FORNASETTI",
+            "BrandId": 9690,
+            "Title": "Capitello Corinzio\r\n",
+            "Author": "Fornasetti",
+            "MicroCategoryCode": "sdt",
+            "MicroCategory": "Seduta",
+            "MicroCategoryPlural": "Sedute",
+            "MacroCategoryCode": "rrdmnt",
+            "MacroCategory": "Arredi",
+            "MacroCategoryPlural": "Arredi",
+            "AlternativeMicro": "Sedia",
+            "FullPrice": 2700,
+            "DiscountedPrice": 2700,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "58019890WJ",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "2387",
+            "FormattedFullPrice": "EUR 2.700,00",
+            "FormattedDiscountedPrice": "EUR 2.700,00",
+            "DiscountedPriceEur": 2700,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58019793TP",
+            "Brand": "FORNASETTI",
+            "BrandId": 9690,
+            "Title": "Capitello Ionico",
+            "Author": "Fornasetti",
+            "MicroCategoryCode": "sdt",
+            "MicroCategory": "Seduta",
+            "MicroCategoryPlural": "Sedute",
+            "MacroCategoryCode": "rrdmnt",
+            "MacroCategory": "Arredi",
+            "MacroCategoryPlural": "Arredi",
+            "AlternativeMicro": "Sedia",
+            "FullPrice": 2700,
+            "DiscountedPrice": 2700,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "58019793TP",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "2387",
+            "FormattedFullPrice": "EUR 2.700,00",
+            "FormattedDiscountedPrice": "EUR 2.700,00",
+            "DiscountedPriceEur": 2700,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58001106CM",
+            "Brand": "MEMPHIS MILANO",
+            "BrandId": 6621,
+            "Title": "Astimelusa",
+            "Author": "Ettore Sottsass",
+            "MicroCategoryCode": "vs",
+            "MicroCategory": "Vaso",
+            "MicroCategoryPlural": "Vasi",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "AlternativeMicro": "Vaso",
+            "FullPrice": 2680,
+            "DiscountedPrice": 2680,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 10,
+                    "Cod10": "58001106CM",
+                    "Description": "Giallo",
+                    "Rgb": "EBD832"
+                }
+            ],
+            "HasFlipSide": false,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 2.680,00",
+            "FormattedDiscountedPrice": "EUR 2.680,00",
+            "DiscountedPriceEur": 2680,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41604762RB",
+            "Brand": "DOLCE & GABBANA",
+            "BrandId": 25,
+            "Author": "",
+            "MicroCategoryCode": "cbn1",
+            "MicroCategory": "Caban e doppio petto",
+            "MicroCategoryPlural": "Caban e doppio petto",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2613,
+            "DiscountedPrice": 2613,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "56"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "41604762RB",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "1691",
+            "FormattedFullPrice": "EUR 2.613,00",
+            "FormattedDiscountedPrice": "EUR 2.613,00",
+            "DiscountedPriceEur": 2613,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41785411UN",
+            "Brand": "FENDI",
+            "BrandId": 35,
+            "Author": "",
+            "MicroCategoryCode": "gbbttpll",
+            "MicroCategory": "Giubbotto Pelle",
+            "MicroCategoryPlural": "Giubbotti Pelle",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2600,
+            "DiscountedPrice": 2600,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "50"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 20,
+                    "Cod10": "41785411UN",
+                    "Description": "Blu scuro",
+                    "Rgb": "3A476D"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "77",
+            "FormattedFullPrice": "EUR 2.600,00",
+            "FormattedDiscountedPrice": "EUR 2.600,00",
+            "DiscountedPriceEur": 2600,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "49343058WQ",
+            "Brand": "BRUNELLO CUCINELLI",
+            "BrandId": 942,
+            "Author": "",
+            "MicroCategoryCode": "bt1",
+            "MicroCategory": "Abito",
+            "MicroCategoryPlural": "Abiti",
+            "MacroCategoryCode": "bt",
+            "MacroCategory": "Abiti e Giacche",
+            "MacroCategoryPlural": "Abiti e Giacche",
+            "FullPrice": 2600,
+            "DiscountedPrice": 2600,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "52"
+                },
+                {
+                    "Text": "54"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 7621,
+                    "Cod10": "49343058WQ",
+                    "Description": "Piombo",
+                    "Rgb": "79756c"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "53",
+            "FormattedFullPrice": "EUR 2.600,00",
+            "FormattedDiscountedPrice": "EUR 2.600,00",
+            "DiscountedPriceEur": 2600,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58030883TH",
+            "Brand": "NANIMARQUINA",
+            "BrandId": 24051,
+            "Author": "",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 2600,
+            "DiscountedPrice": 2600,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 7621,
+                    "Cod10": "58030883TH",
+                    "Description": "Piombo",
+                    "Rgb": "79756c"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "64",
+            "FormattedFullPrice": "EUR 2.600,00",
+            "FormattedDiscountedPrice": "EUR 2.600,00",
+            "DiscountedPriceEur": 2600,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58012861HW",
+            "Brand": "ARTEMIDE",
+            "BrandId": 25318,
+            "Title": "SKYDRO",
+            "Author": "Ross Lovegrove",
+            "MicroCategoryCode": "lmpdsspn",
+            "MicroCategory": "Lampada a sospensione",
+            "MicroCategoryPlural": "Lampade a sospensione",
+            "MacroCategoryCode": "llmnzn",
+            "MacroCategory": "Illuminazione",
+            "MacroCategoryPlural": "Illuminazione",
+            "FullPrice": 2590,
+            "DiscountedPrice": 2590,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58012861HW",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "2387",
+            "FormattedFullPrice": "EUR 2.590,00",
+            "FormattedDiscountedPrice": "EUR 2.590,00",
+            "DiscountedPriceEur": 2590,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58030432SW",
+            "Brand": "GIACOMO MOOR - GIORDANO VIGANO'",
+            "BrandId": 36168,
+            "Author": "",
+            "MicroCategoryCode": "pcclmbl",
+            "MicroCategory": "Piccolo Mobile",
+            "MicroCategoryPlural": "Piccoli Mobili",
+            "MacroCategoryCode": "rrdmnt",
+            "MacroCategory": "Arredi",
+            "MacroCategoryPlural": "Arredi",
+            "FullPrice": 2575,
+            "DiscountedPrice": 2575,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58030432SW",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "",
+            "FormattedFullPrice": "EUR 2.575,00",
+            "FormattedDiscountedPrice": "EUR 2.575,00",
+            "DiscountedPriceEur": 2575,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "58039131BS",
+            "Brand": "NANIMARQUINA",
+            "BrandId": 24051,
+            "Title": "HAYON for NANI\r\n",
+            "Author": "Jaime Hayon",
+            "MicroCategoryCode": "tppt",
+            "MicroCategory": "Tappeto",
+            "MicroCategoryPlural": "Tappeti",
+            "MacroCategoryCode": "cmplmntr",
+            "MacroCategory": "Complementi d'arredo",
+            "MacroCategoryPlural": "Complementi d'arredo",
+            "FullPrice": 2550,
+            "DiscountedPrice": 2550,
+            "IsSoldout": false,
+            "Sizes": [],
+            "Colors": [
+                {
+                    "Id": 80,
+                    "Cod10": "58039131BS",
+                    "Description": "(-)",
+                    "Rgb": "ffffff"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "46",
+            "FormattedFullPrice": "EUR 2.550,00",
+            "FormattedDiscountedPrice": "EUR 2.550,00",
+            "DiscountedPriceEur": 2550,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41773676NS",
+            "Brand": "VERSACE",
+            "BrandId": 1889,
+            "Author": "",
+            "MicroCategoryCode": "bkr1",
+            "MicroCategory": "Biker",
+            "MicroCategoryPlural": "Biker",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2500,
+            "DiscountedPrice": 2500,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "52"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "41773676NS",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "1685",
+            "FormattedFullPrice": "EUR 2.500,00",
+            "FormattedDiscountedPrice": "EUR 2.500,00",
+            "DiscountedPriceEur": 2500,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41732002RJ",
+            "Brand": "GUCCI",
+            "BrandId": 42,
+            "Author": "",
+            "MicroCategoryCode": "bmbr1",
+            "MicroCategory": "Bomber",
+            "MicroCategoryPlural": "Bomber",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2500,
+            "DiscountedPrice": 2500,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "52"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "41732002RJ",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "60",
+            "FormattedFullPrice": "EUR 2.500,00",
+            "FormattedDiscountedPrice": "EUR 2.500,00",
+            "DiscountedPriceEur": 2500,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41784531FX",
+            "Brand": "SAINT LAURENT",
+            "BrandId": 24494,
+            "Author": "",
+            "MicroCategoryCode": "bkr1",
+            "MicroCategory": "Biker",
+            "MicroCategoryPlural": "Biker",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2450,
+            "DiscountedPrice": 2450,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "50"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "41784531FX",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "",
+            "FormattedFullPrice": "EUR 2.450,00",
+            "FormattedDiscountedPrice": "EUR 2.450,00",
+            "DiscountedPriceEur": 2450,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41752868RW",
+            "Brand": "DUNHILL",
+            "BrandId": 7924,
+            "Author": "",
+            "MicroCategoryCode": "",
+            "MicroCategory": "Giubbotto",
+            "MicroCategoryPlural": "Giubbotto",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2450,
+            "DiscountedPrice": 2450,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "M"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 20,
+                    "Cod10": "41752868RW",
+                    "Description": "Blu scuro",
+                    "Rgb": "3A476D"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "65",
+            "FormattedFullPrice": "EUR 2.450,00",
+            "FormattedDiscountedPrice": "EUR 2.450,00",
+            "DiscountedPriceEur": 2450,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41776278FI",
+            "Brand": "TOD'S",
+            "BrandId": 83,
+            "Author": "",
+            "MicroCategoryCode": "gbbttpll",
+            "MicroCategory": "Giubbotto Pelle",
+            "MicroCategoryPlural": "Giubbotti Pelle",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2405,
+            "DiscountedPrice": 2405,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "S"
+                },
+                {
+                    "Text": "M"
+                },
+                {
+                    "Text": "L"
+                },
+                {
+                    "Text": "XL"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 42,
+                    "Cod10": "41776278FI",
+                    "Description": "Cammello",
+                    "Rgb": "BEA58F"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": false,
+            "SalesLineId": "65",
+            "FormattedFullPrice": "EUR 2.405,00",
+            "FormattedDiscountedPrice": "EUR 2.405,00",
+            "DiscountedPriceEur": 2405,
+            "HasAlternativeImage": false
+        },
+        {
+            "Cod10": "41776791EC",
+            "Brand": "RICK OWENS",
+            "BrandId": 1316,
+            "Author": "",
+            "MicroCategoryCode": "cpptt",
+            "MicroCategory": "Cappotto",
+            "MicroCategoryPlural": "Cappotti",
+            "MacroCategoryCode": "cpspll",
+            "MacroCategory": "Cappotti e Giubbotti",
+            "MacroCategoryPlural": "Cappotti e Giubbotti",
+            "FullPrice": 2400,
+            "DiscountedPrice": 2400,
+            "IsSoldout": false,
+            "Sizes": [
+                {
+                    "Text": "M"
+                },
+                {
+                    "Text": "XL"
+                }
+            ],
+            "Colors": [
+                {
+                    "Id": 7,
+                    "Cod10": "41776791EC",
+                    "Description": "Nero",
+                    "Rgb": "000000"
+                }
+            ],
+            "HasFlipSide": true,
+            "HasModelImage": true,
+            "SalesLineId": "406",
+            "FormattedFullPrice": "EUR 2.400,00",
+            "FormattedDiscountedPrice": "EUR 2.400,00",
+            "DiscountedPriceEur": 2400,
+            "HasAlternativeImage": false
+        }
+    ],
+    "SearchRequest": {
+        "Tags": [],
+        "Department": "men",
+        "InheritedMicroDesignerIds": "",
+        "SortId": 4,
+        "SortValue": "PriceDescending",
+        "Season": "X",
+        "Gender": "U",
+        "Page": 1,
+        "ProductsPerPage": 40,
+        "TextSearch": "",
+        "MicroDesigners": [],
+        "Attributes": {}
+    },
+    "Area": "fashion",
+    "Analytics": {
+        "SelectedBrand": "",
+        "TypedTextSearch": "",
+        "TotalPages": "3156",
+        "Color": "",
+        "Season": "X",
+        "ItemPerPage": "40",
+        "SelectedPage": "1",
+        "Sorting": "PriceDesc",
+        "TotalItems": "126215",
+        "Url": "/it/uomo/shoponline?dept=men&gender=U&page=1&season=X&sort=4"
+    },
+    "BrandBannerActionUrl": "",
+    "MobileFriendlyUrl": "https://www.yoox.com/it/uomo/shoponline",
+    "Department": "men",
+    "ErrorCode": 0
+}
