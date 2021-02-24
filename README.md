@@ -24,7 +24,7 @@ For this reasons this test checks only the viewmodel code, moreover the json sho
 
 ViewModelTest-2 
 
-This tests check the getCatalog and getProduct methods using mockWebServer and so they tests all the chain from the servise response until the viemodel layer, they tests also livedata funcionality. Moreover i provided an example that check getCatalog behavior when the server answer "internal server error".
+This tests check the getCatalog and getProduct methods using mockWebServer and so they tests all the chain from the service response until the viemodel layer, they tests also livedata funcionality. Moreover i provided an example that check getCatalog behavior when the server answer "internal server error".
 
 Interactor tests 
 
