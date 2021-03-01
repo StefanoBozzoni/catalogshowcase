@@ -74,7 +74,7 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
 
         onView(withId(R.id.navigation_highest)).perform(click())
         waitUntilLoaded { rvCatalog!! }
-        SystemClock.sleep(1000) //wait , we can't use waitUntilLoaded here because it works only at first loaded layout
+        SystemClock.sleep(2000) //wait , we can't use waitUntilLoaded here because it works only at first loaded layout
 
         onView(withId(R.id.rv_catalog_list)).check(RecyclerViewHasTextAtPositionAssertion(2,"Tappeto"))
         onView(withId(R.id.rv_catalog_list))

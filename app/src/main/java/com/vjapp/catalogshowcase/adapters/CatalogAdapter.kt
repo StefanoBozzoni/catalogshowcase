@@ -13,7 +13,6 @@ class CatalogAdapter(private val listener: OnCatalogItemSelectionListener) : Rec
 
     interface OnCatalogItemSelectionListener {
         fun onItemSelection(element: CatalogItemEntity)
-        fun onEmptyList() {}
     }
 
     private var itemsList: MutableList<CatalogItemEntity> = mutableListOf()
@@ -44,6 +43,7 @@ class CatalogAdapter(private val listener: OnCatalogItemSelectionListener) : Rec
     fun addData(data: List<CatalogItemEntity>) {
         itemsList.addAll(data.toMutableList())
         notifyDataSetChanged()
+        //notifyItemRangeInserted()
     }
 
     fun resetData() {

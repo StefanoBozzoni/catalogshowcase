@@ -1,5 +1,6 @@
 package com.vjapp.catalogshowcase.presentation
 
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,16 +10,16 @@ import kotlinx.coroutines.*
 
 class DetailViewModel(private val getProductUseCase: GetProductUseCase,
                       private val coroutineDispatcher: CoroutineDispatcher) : ViewModel() {
-    val getProductLiveData = MutableLiveData<Resource<ProductEntity>>()
+    private val getProductLiveData = MutableLiveData<Resource<ProductEntity>>()
+
+    fun getProductLiveDataState():LiveData<Resource<ProductEntity>> = getProductLiveData
 
     fun getProduct() {
         viewModelScope.launch(coroutineDispatcher) {
             try {
                 getProductLiveData.postValue(Resource.loading())
-                coroutineScope {
-                    val product = async { getProductUseCase.execute() }.await()
-                    getProductLiveData.postValue(Resource.success(product))
-                }
+                val product = getProductUseCase.execute()
+                getProductLiveData.postValue(Resource.success(product))
             } catch (t: Throwable) {
                 getProductLiveData.postValue(Resource.error("Errore caricamento Prodotto"))
             }
