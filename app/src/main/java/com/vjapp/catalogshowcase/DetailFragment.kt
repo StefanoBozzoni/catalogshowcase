@@ -55,7 +55,7 @@ class DetailFragment : Fragment() {
     }
 
     private fun initializeHandlers() {
-        detailViewModel.getProductLiveData.observe(viewLifecycleOwner, Observer { response ->
+        detailViewModel.getProductLiveDataState().observe(viewLifecycleOwner, Observer { response ->
             response?.let { handleGetProductComplete(response) }
         })
     }

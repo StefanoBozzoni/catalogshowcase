@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.gms.google-services'
 apply plugin: 'kotlin-android'
 
 apply plugin: 'kotlin-android-extensions'
@@ -8,15 +8,15 @@ apply plugin: "kotlin-kapt"
 android {
     signingConfigs {
         debug {
-            storeFile file('C:\\Dev\\writestapp\\certificate\\keystore.jks')
+            storeFile file('C:\\Dev\\20210219_bozzoni_catalogshowcase\\app\\certificate\\keystore.jks')
             storePassword 'android'
-            keyAlias = 'key0'
+            keyAlias = 'key'
             keyPassword 'android'
         }
         release {
-            storeFile file('C:\\Dev\\writestapp\\certificate\\keystore.jks')
+            storeFile file('C:\\Dev\\20210219_bozzoni_catalogshowcase\\app\\certificate\\keystore.jks')
             storePassword 'android'
-            keyAlias = 'key0'
+            keyAlias = 'key'
             keyPassword 'android'
         }
     }
@@ -65,17 +65,20 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
     implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.cardview:cardview:1.0.0'
+
+    implementation platform('com.google.firebase:firebase-bom:26.5.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
     implementation "org.jetbrains.anko:anko-commons:0.10.8"
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.1'
     implementation 'org.koin:koin-core:2.2.2'
     implementation 'org.koin:koin-android-viewmodel:2.2.2'
 
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.0"
+    //implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0"
+    //implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.0"
 
     implementation "com.squareup.okhttp3:okhttp:${libVersions.okHttp}"
     api "com.squareup.okhttp3:logging-interceptor:${libVersions.okHttp}"
