@@ -8,13 +8,13 @@ apply plugin: "kotlin-kapt"
 android {
     signingConfigs {
         debug {
-            storeFile file('C:\\Dev\\20210219_bozzoni_catalogshowcase\\app\\certificate\\keystore.jks')
+            storeFile file('./certificate/keystore.jks')
             storePassword 'android'
             keyAlias = 'key'
             keyPassword 'android'
         }
         release {
-            storeFile file('C:\\Dev\\20210219_bozzoni_catalogshowcase\\app\\certificate\\keystore.jks')
+            storeFile file('./certificate/keystore.jks')
             storePassword 'android'
             keyAlias = 'key'
             keyPassword 'android'
