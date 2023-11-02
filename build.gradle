@@ -55,10 +55,11 @@ buildscript {
 allprojects {
     repositories {
         google()
+        //mavenCentral()
         jcenter()
     }
 }
 
-task clean(type: Delete) {
+tasks.register('clean', Delete) {
     delete rootProject.buildDir
 }

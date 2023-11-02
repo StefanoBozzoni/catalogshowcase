@@ -1,15 +1,20 @@
 package com.vjapp.catalogshowcase
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import androidx.core.os.bundleOf
 import com.vjapp.catalogshowcase.base.BaseKoinTest
 import com.vjapp.catalogshowcase.data.exceptions.NetworkCommunicationException
 import com.vjapp.catalogshowcase.di.configureTestAppComponent
 import com.vjapp.catalogshowcase.domain.interctor.GetCatalogUseCase
 import com.vjapp.catalogshowcase.domain.model.SearchTypes
 import io.mockk.MockKAnnotations
+import junit.framework.Assert.assertEquals
+import junit.framework.Assert.assertNotNull
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.test.runBlockingTest
 import org.hamcrest.Matchers.*
-import org.junit.Assert
+import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -43,14 +48,15 @@ class InteractorsTest : BaseKoinTest(){
 
         val dataReceived = mGetCatalogUseCase.execute(GetCatalogUseCase.Params(SearchTypes.SEARCHRESULT))
 
-        Assert.assertNotNull(dataReceived)
-        Assert.assertEquals(dataReceived.catalogList.size, mCount)
-        Assert.assertThat(dataReceived.catalogList[0].cod10.length, greaterThan(0))
+        assertNotNull(dataReceived)
+        assertEquals(dataReceived.catalogList.size, mCount)
+        assertThat(dataReceived.catalogList[0].cod10.length, greaterThan(0))
     }
 
 
+    @OptIn(ExperimentalCoroutinesApi::class)
     @Test
-    fun test_getCatalog_returns_interna_server_error()= runBlocking{
+    fun test_getCatalog_returns_interna_server_error()= runBlockingTest{
         val mGetCatalogUseCase: GetCatalogUseCase =get()
 
         mockNetworkResponseWithFileContent("catalog_response.json", HttpURLConnection.HTTP_INTERNAL_ERROR)
@@ -64,6 +70,8 @@ class InteractorsTest : BaseKoinTest(){
         }
 
         assert(exception is NetworkCommunicationException)
+
+
     }
 
 

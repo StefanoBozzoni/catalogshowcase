@@ -67,7 +67,7 @@ class ViewModelTests : BaseKoinTest() {
 
         coroutineTestRule.dispatcher.runBlockingTest() {
             mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
-            mMainViewModel.getCatalogLiveData.observeOnce() {}
+            mMainViewModel.getCatalogLiveData.observeOnce {}
         }
 
         System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.first?.status?.toString())
@@ -80,12 +80,12 @@ class ViewModelTests : BaseKoinTest() {
     fun GetProductTest() {
         mDetailViewModel = DetailViewModel(mgetProductUseCase, coroutineTestRule.dispatcher)
         val sampleResponse = getJson("product_response.json")
-        var jsonObj = Gson().fromJson(sampleResponse, ProductEntity::class.java)
+        val jsonObj = Gson().fromJson(sampleResponse, ProductEntity::class.java)
         coEvery { mgetProductUseCase.execute() } returns jsonObj
 
         coroutineTestRule.dispatcher.runBlockingTest() {
             mDetailViewModel.getProduct()
-            mDetailViewModel.getProductLiveData.observeOnce() {}
+            mDetailViewModel.getProductLiveDataState().observeOnce() {}
         }
         System.out.println("3->" + mDetailViewModel.getProductLiveData.value?.status?.toString())
         val value = mDetailViewModel.getProductLiveData.value

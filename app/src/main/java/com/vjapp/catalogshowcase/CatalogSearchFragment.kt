@@ -14,6 +14,7 @@ import com.vjapp.catalogshowcase.domain.model.CatalogEntity
 import com.vjapp.catalogshowcase.domain.model.CatalogItemEntity
 import com.vjapp.catalogshowcase.domain.model.OperationType
 import com.vjapp.catalogshowcase.domain.model.SearchTypes
+import com.vjapp.catalogshowcase.presentation.EspressoIdlingResource
 import com.vjapp.catalogshowcase.presentation.MainViewModel
 import com.vjapp.catalogshowcase.presentation.Resource
 import com.vjapp.catalogshowcase.presentation.ResourceState
@@ -49,7 +50,7 @@ class CatalogSearchFragment : Fragment(),
 
         endlessRecyclerViewScrollListener = object : EndlessRecyclerViewScrollListener(layoutManager) {
             override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView?) {
-                Log.d("DEBUG","Load more Ricette for page: ${page + 1}")
+                Log.d("XDEBUG","Load more Ricette for page: ${page + 1}")
                 loadData(page + 1)
             }
         }
@@ -75,6 +76,7 @@ class CatalogSearchFragment : Fragment(),
     }
 
     private fun setViewForLoading(operation: OperationType) {
+        EspressoIdlingResource.increment()
         if (operation==OperationType.REPLACE_LIST) {
             vf_catalog.displayedChild = 0
         }
@@ -103,11 +105,13 @@ class CatalogSearchFragment : Fragment(),
                 endlessRecyclerViewScrollListener.resetState()
                 catalogAdapter.updateData(newCatalog.catalogList)
             }
+            EspressoIdlingResource.decrement()
         }
     }
 
     private fun setViewForError() {
         vf_catalog.displayedChild = 2
+        EspressoIdlingResource.decrement()
     }
 
 

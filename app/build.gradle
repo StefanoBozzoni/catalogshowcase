@@ -33,12 +33,14 @@ android {
         testInstrumentationRunner 'com.vjapp.catalogshowcase.apptest.CustomInstrumentationRunner'
     }
     buildTypes {
+
         release {
             minifyEnabled false
             debuggable true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
+            testCoverageEnabled true
             applicationIdSuffix ".debug"
             debuggable true
         }
@@ -121,11 +123,19 @@ dependencies {
     androidTestImplementation "org.koin:koin-test:2.2.2"
 
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.4.2'
+    //--->> note, latest version is:
+    //testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3'
+    //to use that look at the migration guide:
+    //https://github.com/Kotlin/kotlinx.coroutines/blob/master/kotlinx-coroutines-test/MIGRATION.md
+    //debugImplementation "androidx.fragment:fragment-testing:1.6.2"
 
     // Espresso dependencies
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.0'
+
+    //Idling resource
+    implementation "androidx.test.espresso:espresso-idling-resource:3.1.0"
     //androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.0'
     //androidTestImplementation 'androidx.test.espresso:espresso-accessibility:3.1.0'
     //androidTestImplementation 'androidx.test.espresso:espresso-web:3.1.0'

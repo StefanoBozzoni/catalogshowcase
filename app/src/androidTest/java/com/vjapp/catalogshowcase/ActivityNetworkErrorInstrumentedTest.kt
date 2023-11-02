@@ -44,19 +44,19 @@ class ActivityNetworkErrorInstrumentedTest : BaseKoinInstrumentedTest() {
         mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_NOT_FOUND)
 
         launch(CatalogSearchActivity::class.java) //equivalent to launchactivity java
-        SystemClock.sleep(4000) //wait for the mockwebserve to come up
+        //SystemClock.sleep(4000) //wait for the mockwebserve to come up
         onView(withId(R.id.image_view_icon_error)).check(matches(isDisplayed()))
     }
+
 
     @Test
     fun DetailActivityNetworkErrorTest() {
         mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_NOT_FOUND)
-
         launch(DetailActivity::class.java) //equivalent to launchactivity java
-        SystemClock.sleep(4000) //wait for the mockwebserve to come up
+        //SystemClock.sleep(4000) //wait for the mockwebserve to come up
         onView(withId(R.id.image_view_icon_error)).check(matches(isDisplayed()))
-
     }
+
 
 
 }

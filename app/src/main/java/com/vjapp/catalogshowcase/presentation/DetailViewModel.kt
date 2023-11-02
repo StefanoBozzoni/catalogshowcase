@@ -10,7 +10,7 @@ import kotlinx.coroutines.*
 
 class DetailViewModel(private val getProductUseCase: GetProductUseCase,
                       private val coroutineDispatcher: CoroutineDispatcher) : ViewModel() {
-    private val getProductLiveData = MutableLiveData<Resource<ProductEntity>>()
+    val getProductLiveData = MutableLiveData<Resource<ProductEntity>>()
 
     fun getProductLiveDataState():LiveData<Resource<ProductEntity>> = getProductLiveData
 

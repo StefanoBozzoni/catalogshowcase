@@ -14,6 +14,9 @@ import com.squareup.picasso.RequestCreator
 import io.mockk.MockKAnnotations
 import io.mockk.every
 import io.mockk.mockk
+import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -29,6 +32,7 @@ import java.io.File
  */
 @RunWith(AndroidJUnit4::class)
 @Config(sdk = [O])
+@ExperimentalCoroutinesApi
 //@LooperMode(LooperMode.Mode.PAUSED)
 class ActivitiesTest : AutoCloseKoinTest() {
 
@@ -42,22 +46,24 @@ class ActivitiesTest : AutoCloseKoinTest() {
 
     @Test
     fun activity_CatalogSearch() {
+
         //scenario.recreate()
-        //val picasso = Picasso.Builder(this).build()
+        /*
         val picasso: Picasso = mockk(relaxed = true)
         Picasso.setSingletonInstance(picasso)
         val requestCreator: RequestCreator = mockk(relaxed = true)
         every { Picasso.get().load(nullable(String::class.java)) } returns requestCreator
         every { picasso.load(nullable(Uri::class.java)) } returns requestCreator
         every { picasso.load(nullable(File::class.java)) } returns requestCreator
+        */
 
         // GIVEN
         val scenario = launchActivity<CatalogSearchActivity>()
         //shadowOf(getMainLooper()).idle()
         //ShadowLooper.runMainLooperOneTask()
-
-        Thread.sleep(3000)
+        //Thread.sleep(3000)
         scenario.onActivity { activity -> assert(activity != null) }
+
     }
 
     @Test
@@ -77,7 +83,7 @@ class ActivitiesTest : AutoCloseKoinTest() {
             fab_color_1.performClick()
 
             val fragmentList: List<Fragment> = activity.getSupportFragmentManager().getFragments()
-            var mFragment: DetailFragment? = null
+            val mFragment: DetailFragment?
             if (fragmentList[0] is DetailFragment) {
                 mFragment = fragmentList[0] as DetailFragment
 
@@ -91,6 +97,11 @@ class ActivitiesTest : AutoCloseKoinTest() {
 
             }
         }
+
+    }
+
+    @Test
+    fun activeTaskDetails_DisplayedInUi() = runTest{
 
 
     }

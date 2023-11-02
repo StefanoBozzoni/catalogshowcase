@@ -5,7 +5,6 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.vjapp.catalogshowcase.base.BaseKoinTest
 import com.vjapp.catalogshowcase.di.configureTestAppComponent
 import com.vjapp.catalogshowcase.domain.interctor.GetCatalogUseCase
-import com.vjapp.catalogshowcase.domain.interctor.GetProductUseCase
 import com.vjapp.catalogshowcase.domain.model.SearchTypes
 import com.vjapp.catalogshowcase.presentation.DetailViewModel
 import com.vjapp.catalogshowcase.presentation.MainViewModel
@@ -15,10 +14,9 @@ import io.mockk.MockKAnnotations
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest
-import okhttp3.mockwebserver.MockWebServer
 import org.hamcrest.Matchers.`is`
 import org.hamcrest.Matchers.greaterThan
-import org.junit.Assert
+import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -26,7 +24,6 @@ import org.junit.runner.RunWith
 import org.junit.runners.JUnit4
 import org.koin.core.context.startKoin
 import org.koin.test.get
-import org.koin.test.inject
 import java.net.HttpURLConnection
 
 /**
@@ -40,6 +37,8 @@ class ViewModelTests2 : BaseKoinTest() {
     @get:Rule
     var instantExecutorRule = InstantTaskExecutorRule()
 
+
+    @ExperimentalCoroutinesApi
     @Before
     fun start() {
 
@@ -48,6 +47,7 @@ class ViewModelTests2 : BaseKoinTest() {
         startKoin {
             modules(configureTestAppComponent(getMockWebServerUrl()))
         }
+
     }
 
     @MockK
@@ -55,12 +55,12 @@ class ViewModelTests2 : BaseKoinTest() {
     @MockK
     lateinit var mDetailViewModel: DetailViewModel
 
-    val mMockWebServer: MockWebServer by inject()
+    //val mMockWebServer: MockWebServer by inject()
 
     @ExperimentalCoroutinesApi
     @Test
-    fun GetCatalogTest() {
-        val mGetCatalogUseCase: GetCatalogUseCase =get()
+    fun getCatalogTest() {
+        val mGetCatalogUseCase: GetCatalogUseCase = get()
 
         mMainViewModel = MainViewModel(mGetCatalogUseCase, coroutineTestRule.dispatcher)
 
@@ -71,7 +71,7 @@ class ViewModelTests2 : BaseKoinTest() {
         //val jsonObj = Gson().fromJson(sampleResponse, CatalogEntity::class.java)
         //coEvery { mgetCatalogUseCase.execute() } returns jsonObj
 
-        coroutineTestRule.dispatcher.runBlockingTest() {
+        coroutineTestRule.dispatcher.runBlockingTest {
             mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
 
             mMainViewModel.getCatalogLiveData.getOrAwaitValue {}
@@ -80,17 +80,17 @@ class ViewModelTests2 : BaseKoinTest() {
             }
         }
 
-        System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.first?.status?.toString())
+        println("3->" + mMainViewModel.getCatalogLiveData.value?.first?.status?.toString())
 
         val value = mMainViewModel.getCatalogLiveData.value
-        Assert.assertThat(value?.first?.status, `is`(ResourceState.SUCCESS))
-        Assert.assertThat(value?.first?.data!!.catalogList.size, `is`(40))
-        Assert.assertThat(value.first.data!!.catalogList[0].cod10.length, greaterThan(0))
+        assertThat(value?.first?.status, `is`(ResourceState.SUCCESS))
+        assertThat(value?.first?.data!!.catalogList.size, `is`(40))
+        assertThat(value.first.data!!.catalogList[0].cod10.length, greaterThan(0))
     }
 
     @ExperimentalCoroutinesApi
     @Test
-    fun GetCatalogTest_error() {
+    fun getCatalogTest_error() {
         val mGetCatalogUseCase: GetCatalogUseCase =get()
 
         mMainViewModel = MainViewModel(mGetCatalogUseCase, coroutineTestRule.dispatcher)
@@ -102,45 +102,38 @@ class ViewModelTests2 : BaseKoinTest() {
         //val jsonObj = Gson().fromJson(sampleResponse, CatalogEntity::class.java)
         //coEvery { mgetCatalogUseCase.execute() } returns jsonObj
 
-        coroutineTestRule.dispatcher.runBlockingTest() {
+        coroutineTestRule.dispatcher.runBlockingTest {
             mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
-
-            mMainViewModel.getCatalogLiveData.getOrAwaitValue {}
-            while (mMainViewModel.getCatalogLiveData.value?.first?.status == ResourceState.LOADING) {
-                mMainViewModel.getCatalogLiveData.getOrAwaitValue {}
-            }
+            mMainViewModel.getCatalogLiveData.getOrAwaitValue(intialCountDown=2) {}
         }
 
         System.out.println("3->" + mMainViewModel.getCatalogLiveData.value?.first?.status?.toString())
         SystemClock.sleep(2000)
         val value = mMainViewModel.getCatalogLiveData.value
-        Assert.assertThat(value?.first?.status, `is`(ResourceState.ERROR))
+        assertThat(value?.first?.status, `is`(ResourceState.ERROR))
     }
 
     @ExperimentalCoroutinesApi
     @Test
-    fun GetProductTest() {
-        val mgetProductUseCase: GetProductUseCase = get()
-        mDetailViewModel = DetailViewModel(mgetProductUseCase, coroutineTestRule.dispatcher)
+    fun getProductTest() {
+        //val mgetProductUseCase: GetProductUseCase = get()
+        mDetailViewModel = DetailViewModel(get(), coroutineTestRule.dispatcher)
 
         //val sampleResponse = getJson("product_response.json")
         //var jsonObj = Gson().fromJson(sampleResponse, ProductEntity::class.java)
         //coEvery { mgetProductUseCase.execute() } returns jsonObj
         mockNetworkResponseWithFileContent("product_response.json", HttpURLConnection.HTTP_OK)
 
-        coroutineTestRule.dispatcher.runBlockingTest() {
+        coroutineTestRule.dispatcher.runBlockingTest {
             mDetailViewModel.getProduct()
-            mDetailViewModel.getProductLiveData.getOrAwaitValue() {}
-            while (mDetailViewModel.getProductLiveData.value?.status == ResourceState.LOADING) {
-                mDetailViewModel.getProductLiveData.getOrAwaitValue {}
-            }
+            mDetailViewModel.getProductLiveDataState().getOrAwaitValue(intialCountDown=2) {} //<<-- look here!!! to wait for success!!
         }
-        System.out.println("3->" + mDetailViewModel.getProductLiveData.value?.status?.toString())
-        val value = mDetailViewModel.getProductLiveData.value
-        assert(value?.status == ResourceState.SUCCESS)
+        println("3->" + mDetailViewModel.getProductLiveDataState().value?.status?.toString())
+        val value = mDetailViewModel.getProductLiveDataState().value
+        //works but i don't like that way: assert(value?.status == ResourceState.SUCCESS)
+        assertThat(value?.status, `is`(ResourceState.SUCCESS))
     }
 
 
-
-
+    //runBlockingTest it's better then runBlocking for testing purpose because it skips delays and time consuming operation
 }

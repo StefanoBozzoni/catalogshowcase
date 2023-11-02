@@ -1,29 +1,25 @@
 package com.vjapp.catalogshowcase
 
-import android.os.SystemClock
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.testing.launchFragmentInContainer
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.core.app.ApplicationProvider
-import androidx.test.espresso.Espresso
 import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
-import androidx.test.espresso.contrib.RecyclerViewActions.scrollToPosition
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.vjapp.catalogshowcase.adapters.CatalogAdapter
 import com.vjapp.catalogshowcase.base.BaseKoinInstrumentedTest
 import com.vjapp.catalogshowcase.di.configureEspressoTestAppComponent
-import com.vjapp.catalogshowcase.domain.model.CatalogEntity
-import com.vjapp.catalogshowcase.domain.model.CatalogItemEntity
 import com.vjapp.catalogshowcase.utils.RecyclerViewHasTextAtPositionAssertion
 import com.vjapp.catalogshowcase.utils.RecyclerViewItemCountAssertion
+import com.vjapp.catalogshowcase.utils.swipeUpCustom
 import com.vjapp.catalogshowcase.utils.waitUntilLoaded
-import org.hamcrest.CoreMatchers
-import org.hamcrest.Matchers
 import org.hamcrest.Matchers.*
 import org.junit.Before
 import org.junit.Test
@@ -40,6 +36,27 @@ import java.net.HttpURLConnection
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
+
+//NOTE: To perform this tests , the animations on the device should be disabled because the test will be cancelled if they are enabled
+//To remove transition or animation on an Android emulator, you can follow these steps:
+//Open the Android emulator.
+//Select Settings.
+//In the Settings window, click on Developer options.
+//Scroll down to the Drawing section.
+//Set the Window animation scale, Transition animation scale, and Animator duration scale values to 0.5x or Off.
+//This will disable all animations on the Android emulator.
+//
+//You can also disable animations on the Android emulator using the following command:
+//
+//adb shell settings put global window_animation_scale 0
+//adb shell settings put global transition_animation_scale 0
+//adb shell settings put global animator_duration_scale 0
+
+//to Re_enable :
+//adb shell settings put global window_animation_scale 1.0
+//adb shell settings put global transition_animation_scale 1.0
+//adb shell settings put global animator_duration_scale 1.0
+
 @RunWith(AndroidJUnit4::class)
 class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
 
@@ -55,11 +72,13 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
 
     @Test
     fun ActivityCatalogSearchAndDetailTest() {
-
         mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_OK)
 
         val scenario =launch(CatalogSearchActivity::class.java) //equivalent to launchactivity java
-        SystemClock.sleep(1000) //wait for the mockwebserve to come up
+
+        //val scenario2 = launchFragmentInContainer<DetailFragment>(bundleOf())
+
+        //SystemClock.sleep(1000) //wait for the mockwebserve to come up
 
         onView(withId(R.id.nav_view)).check(matches(isDisplayed()))  //La bottom bar è visibile
 
@@ -74,7 +93,8 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
 
         onView(withId(R.id.navigation_highest)).perform(click())
         waitUntilLoaded { rvCatalog!! }
-        SystemClock.sleep(2000) //wait , we can't use waitUntilLoaded here because it works only at first loaded layout
+        //SystemClock.sleep(2000) //wait , we can't use waitUntilLoaded here because it works only at first loaded layout
+        //we could use an Idle Resource here ?
 
         onView(withId(R.id.rv_catalog_list)).check(RecyclerViewHasTextAtPositionAssertion(2,"Tappeto"))
         onView(withId(R.id.rv_catalog_list))
@@ -90,12 +110,15 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
         mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_OK)
 
         val scenario =launch(DetailActivity::class.java) //equivalent to launchactivity java
-        SystemClock.sleep(3000) //wait for the mockwebserve to come up
+        //SystemClock.sleep(3000) //wait for the mockwebserve to come up
 
         onView(withId(R.id.tvPrice)).check((matches((isDisplayed()))))
         onView(withId(R.id.tvPrice)).check(matches(withText("EUR 510,00")))
 
-        onView(withId(R.id.spSizes)).perform(click());
+        val nestedScrollView = onView(withId(R.id.nested_scroll_view))
+
+        nestedScrollView.perform(swipeUpCustom())  //<<- scrolls to bottom , it's a custom scroll because the legacy one doesn't work!
+        onView(withId(R.id.spSizes)).perform(click())
         onData(anything()).atPosition(1).perform(click());
         onView(withId(R.id.spSizes)).check(matches(withSpinnerText(containsString("48"))));
 
@@ -103,16 +126,14 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
 
         scenario.onActivity { activity->
             val fragmentList: List<Fragment> = activity.getSupportFragmentManager().getFragments()
-            var mFragment: DetailFragment? = null
+            val mFragment: DetailFragment?
             if (fragmentList[0] is DetailFragment) {
                 mFragment = fragmentList[0] as DetailFragment
 
                 assert(mFragment.choosenColor==0 && activity != null)
             }
         }
-
     }
-
 
 
 }
