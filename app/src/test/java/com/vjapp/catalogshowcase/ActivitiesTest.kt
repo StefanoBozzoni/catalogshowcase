@@ -1,7 +1,6 @@
 package com.vjapp.catalogshowcase
 
 import android.content.pm.ActivityInfo
-import android.net.Uri
 import android.os.Build.VERSION_CODES.O
 import android.widget.TextView
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
@@ -9,22 +8,14 @@ import androidx.fragment.app.Fragment
 import androidx.test.core.app.launchActivity
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.squareup.picasso.Picasso
-import com.squareup.picasso.RequestCreator
 import io.mockk.MockKAnnotations
-import io.mockk.every
-import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runBlockingTest
-import kotlinx.coroutines.test.runTest
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.koin.test.AutoCloseKoinTest
-import org.mockito.ArgumentMatchers.nullable
 import org.robolectric.annotation.Config
-import java.io.File
 
 /*
  Note : This test fail because Picasso handle some background thread , i tried to mock it but it doesn't work
@@ -97,14 +88,6 @@ class ActivitiesTest : AutoCloseKoinTest() {
 
             }
         }
-
     }
-
-    @Test
-    fun activeTaskDetails_DisplayedInUi() = runTest{
-
-
-    }
-
 
 }
