@@ -1,6 +1,5 @@
 package com.vjapp.catalogshowcase
 
-import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
@@ -12,18 +11,19 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.squareup.picasso.Picasso
+import com.vjapp.catalogshowcase.databinding.FragmentDetail2Binding
 import com.vjapp.catalogshowcase.domain.model.ProductEntity
 import com.vjapp.catalogshowcase.presentation.DetailViewModel
 import com.vjapp.catalogshowcase.presentation.Resource
 import com.vjapp.catalogshowcase.presentation.ResourceState
-import kotlinx.android.synthetic.main.detail_from.*
-import kotlinx.android.synthetic.main.fragment_catalog_search.*
-import kotlinx.android.synthetic.main.fragment_detail2.*
-import org.koin.android.viewmodel.ext.android.sharedViewModel
+import org.koin.androidx.viewmodel.ext.android.activityViewModel
 
 class DetailFragment : Fragment() {
 
-    private val detailViewModel: DetailViewModel by sharedViewModel()
+    private val detailViewModel: DetailViewModel by activityViewModel()
+
+    private var _binding: FragmentDetail2Binding? = null
+    private val binding get() = _binding!!
 
     private val array_color_fab = intArrayOf(
         R.id.fab_color_1,
@@ -32,15 +32,15 @@ class DetailFragment : Fragment() {
         R.id.fab_color_4
     )
     var choosenColor :Int = -1
-
     private set
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_detail2, container, false)
+    ): View {
+        _binding = FragmentDetail2Binding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -62,24 +62,26 @@ class DetailFragment : Fragment() {
 
     private fun handleGetProductComplete(response: Resource<ProductEntity>) {
         when (response.status) {
-            ResourceState.LOADING -> vf_product.displayedChild = 0
+            ResourceState.LOADING -> binding.vfProduct.displayedChild = 0
             ResourceState.SUCCESS -> {
-                vf_product.displayedChild = 1
+                binding.vfProduct.displayedChild = 1
                 setViewForSuccess(response.data)
             }
-            ResourceState.ERROR -> vf_product.displayedChild = 2
+            ResourceState.ERROR -> binding.vfProduct.displayedChild = 2
         }
     }
 
     private fun setViewForSuccess(product: ProductEntity?) {
         //Fill the ricyclerview with catalog data
         product?.let {
-            tvBrand.text = product.brandName
-            tvCategory.text = product.category
-            tvPrice.text = product.price
-            Picasso.get().load(buildUrl(product.cod10)).into(ivProductItem)
-            val descrizione = product.itemDescriptions.productInfo.joinToString(separator = "\n")
-            tvDescription.text = descrizione
+            binding.detailForm.apply {
+                tvBrand.text = it.brandName
+                tvCategory.text = it.category
+                tvPrice.text = it.price
+                Picasso.get().load(buildUrl(it.cod10)).into(ivProductItem)
+                val descrizione = it.itemDescriptions.productInfo.joinToString(separator = "\n")
+                tvDescription.text = descrizione
+            }
         }
 
         //fills the color picker
@@ -100,9 +102,7 @@ class DetailFragment : Fragment() {
             android.R.layout.simple_spinner_item, product?.sizes?.map { v -> v.name }?: emptyList())
 
         sizesAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spSizes.adapter = sizesAdapter
-
-
+        binding.detailForm.spSizes.adapter = sizesAdapter
     }
 
     fun setColor(v: View) {

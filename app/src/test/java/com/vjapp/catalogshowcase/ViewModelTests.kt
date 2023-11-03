@@ -17,7 +17,9 @@ import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import okhttp3.mockwebserver.MockWebServer
 import org.junit.Before
 import org.junit.BeforeClass
@@ -65,7 +67,7 @@ class ViewModelTests : BaseKoinTest() {
         val jsonObj = Gson().fromJson(sampleResponse, CatalogEntity::class.java)
         coEvery { mgetCatalogUseCase.execute(any()) } returns jsonObj
 
-        coroutineTestRule.dispatcher.runBlockingTest() {
+        runTest {
             mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
             mMainViewModel.getCatalogLiveData.observeOnce {}
         }
@@ -83,7 +85,7 @@ class ViewModelTests : BaseKoinTest() {
         val jsonObj = Gson().fromJson(sampleResponse, ProductEntity::class.java)
         coEvery { mgetProductUseCase.execute() } returns jsonObj
 
-        coroutineTestRule.dispatcher.runBlockingTest() {
+        runTest {//runTest replaces runBlockingTest
             mDetailViewModel.getProduct()
             mDetailViewModel.getProductLiveDataState().observeOnce() {}
         }

@@ -2,30 +2,30 @@ package com.vjapp.catalogshowcase
 
 import android.os.Bundle
 import android.view.MenuItem
-import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.vjapp.catalogshowcase.databinding.ActivityMainBinding
 import com.vjapp.catalogshowcase.domain.model.SearchTypes
 import com.vjapp.catalogshowcase.presentation.MainViewModel
-import kotlinx.android.synthetic.main.activity_main.*
-import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CatalogSearchActivity : AppCompatActivity(),
-    BottomNavigationView.OnNavigationItemSelectedListener{
+    BottomNavigationView.OnNavigationItemSelectedListener {
 
-
+    private lateinit var binding: ActivityMainBinding
     private val mainViewModel: MainViewModel by viewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.let {
             it.setDisplayShowHomeEnabled(true)
             it.setLogo(R.mipmap.ic_launcher)
             it.setDisplayUseLogoEnabled(true)
         }
-        nav_view.setOnNavigationItemSelectedListener(this)
+        binding.navView.setOnNavigationItemSelectedListener(this)
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -1,7 +1,7 @@
 package com.vjapp.catalogshowcase
 
+
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
-import androidx.core.os.bundleOf
 import com.vjapp.catalogshowcase.base.BaseKoinTest
 import com.vjapp.catalogshowcase.data.exceptions.NetworkCommunicationException
 import com.vjapp.catalogshowcase.di.configureTestAppComponent
@@ -13,6 +13,7 @@ import junit.framework.Assert.assertNotNull
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.test.runBlockingTest
+import kotlinx.coroutines.test.runTest
 import org.hamcrest.Matchers.*
 import org.hamcrest.MatcherAssert.assertThat
 import org.junit.Before
@@ -41,7 +42,7 @@ class InteractorsTest : BaseKoinTest(){
     }
 
     @Test
-    fun test_getCatalog_returns_expected_value()= runBlocking{
+    fun test_getCatalog_returns_expected_value()= runBlocking {
         val mGetCatalogUseCase: GetCatalogUseCase =get()
 
         mockNetworkResponseWithFileContent("catalog_response.json", HttpURLConnection.HTTP_OK)
@@ -56,7 +57,7 @@ class InteractorsTest : BaseKoinTest(){
 
     @OptIn(ExperimentalCoroutinesApi::class)
     @Test
-    fun test_getCatalog_returns_interna_server_error()= runBlockingTest{
+    fun test_getCatalog_returns_interna_server_error()= runTest {
         val mGetCatalogUseCase: GetCatalogUseCase =get()
 
         mockNetworkResponseWithFileContent("catalog_response.json", HttpURLConnection.HTTP_INTERNAL_ERROR)
@@ -68,12 +69,6 @@ class InteractorsTest : BaseKoinTest(){
         } catch(e:Exception) {
             e
         }
-
         assert(exception is NetworkCommunicationException)
-
-
     }
-
-
-
 }

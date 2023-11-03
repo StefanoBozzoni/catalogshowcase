@@ -1,6 +1,5 @@
 package com.vjapp.catalogshowcase
 
-import android.os.SystemClock
 import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView

@@ -8,13 +8,12 @@ import okhttp3.mockwebserver.RecordedRequest
 import org.junit.After
 import org.junit.Before
 import org.koin.core.context.stopKoin
-import org.koin.test.KoinTest
 import java.io.BufferedReader
 import java.io.Reader
 import java.net.HttpURLConnection
 
 
-abstract class BaseKoinInstrumentedTest : KoinTest {
+abstract class BaseKoinInstrumentedTest {
 
     /**
      * For MockWebServer instance

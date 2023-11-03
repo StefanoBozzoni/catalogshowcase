@@ -1,13 +1,11 @@
 package com.vjapp.catalogshowcase.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import com.vjapp.catalogshowcase.R
+import com.vjapp.catalogshowcase.databinding.CatalogItemBinding
 import com.vjapp.catalogshowcase.domain.model.CatalogItemEntity
-import kotlinx.android.synthetic.main.catalog_item.view.*
 
 class CatalogAdapter(private val listener: OnCatalogItemSelectionListener) : RecyclerView.Adapter<CatalogAdapter.ListViewHolder>() {
 
@@ -18,22 +16,18 @@ class CatalogAdapter(private val listener: OnCatalogItemSelectionListener) : Rec
     private var itemsList: MutableList<CatalogItemEntity> = mutableListOf()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(viewType, parent, false)
-        return ListViewHolder(view)
+        val binding = CatalogItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        //val view = LayoutInflater.from(parent.context).inflate(viewType, parent, false)
+        return ListViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        holder.bind(itemsList[position],position)
+        holder.bind(itemsList[position], position)
     }
 
     override fun getItemCount(): Int {
         return this.itemsList.size
     }
-
-    override fun getItemViewType(position: Int): Int {
-        return R.layout.catalog_item
-    }
-
 
     fun updateData(data: List<CatalogItemEntity>) {
         this.itemsList = data.toMutableList()
@@ -51,11 +45,11 @@ class CatalogAdapter(private val listener: OnCatalogItemSelectionListener) : Rec
         notifyDataSetChanged()
     }
 
-    inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ListViewHolder(private val binding: CatalogItemBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(data: CatalogItemEntity, position:Int) {
+        fun bind(data: CatalogItemEntity, position: Int) {
 
-            with (itemView) {
+            binding.apply {
                 tvBrand.text = data.brandName
                 tvCategory.text = data.category
                 tvPrice.text = data.price
@@ -68,7 +62,7 @@ class CatalogAdapter(private val listener: OnCatalogItemSelectionListener) : Rec
 
         }
 
-        fun buildUrl(cod10:String):String {
+        fun buildUrl(cod10: String): String {
             return "https://cdn.yoox.biz/${cod10.substring(0..1)}/${cod10}_11_f.jpg"
         }
     }

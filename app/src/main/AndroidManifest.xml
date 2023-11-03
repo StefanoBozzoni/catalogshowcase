@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        package="com.vjapp.catalogshowcase">
+        xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -17,7 +16,6 @@
             tools:ignore="GoogleAppIndexingWarning">
         <uses-library android:name="android.test.runner"
                 android:required="false" />
-
         <uses-library android:name="android.test.base"
                 android:required="false" />
         <uses-library android:name="android.test.mock"
@@ -26,10 +24,11 @@
         <activity
                 android:name=".CatalogSearchActivity"
                 android:screenOrientation="nosensor"
+                tools:node="merge"
+                android:exported="true"
                 android:label="YOOX Catalog">
-
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN" tools:node="merge" android:exported="true"/>
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -38,6 +37,12 @@
                 android:screenOrientation="nosensor"
                 android:label="scheda prodotto"/>
 
+            <activity
+                android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
+                android:exported="false" />
+            <activity
+                android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
+                android:exported="false" />
     </application>
 
 </manifest>

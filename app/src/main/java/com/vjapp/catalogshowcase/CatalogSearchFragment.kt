@@ -10,6 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.vjapp.catalogshowcase.adapters.CatalogAdapter
+import com.vjapp.catalogshowcase.databinding.FragmentCatalogSearchBinding
 import com.vjapp.catalogshowcase.domain.model.CatalogEntity
 import com.vjapp.catalogshowcase.domain.model.CatalogItemEntity
 import com.vjapp.catalogshowcase.domain.model.OperationType
@@ -18,11 +19,13 @@ import com.vjapp.catalogshowcase.presentation.EspressoIdlingResource
 import com.vjapp.catalogshowcase.presentation.MainViewModel
 import com.vjapp.catalogshowcase.presentation.Resource
 import com.vjapp.catalogshowcase.presentation.ResourceState
-import kotlinx.android.synthetic.main.fragment_catalog_search.*
-import org.koin.android.viewmodel.ext.android.sharedViewModel
+import org.koin.androidx.viewmodel.ext.android.sharedViewModel
 
 class CatalogSearchFragment : Fragment(),
     CatalogAdapter.OnCatalogItemSelectionListener {
+
+    private var _binding: FragmentCatalogSearchBinding? = null
+    private val binding get() = _binding!!
 
     private val mainViewModel : MainViewModel by sharedViewModel()
     private lateinit var endlessRecyclerViewScrollListener : EndlessRecyclerViewScrollListener
@@ -31,8 +34,9 @@ class CatalogSearchFragment : Fragment(),
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_catalog_search, container, false)
+    ): View {
+        _binding = FragmentCatalogSearchBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -44,9 +48,9 @@ class CatalogSearchFragment : Fragment(),
 
     private fun initView() {
         val catalogAdapter = CatalogAdapter(this)
-        rv_catalog_list.adapter = catalogAdapter
+        binding.rvCatalogList.adapter = catalogAdapter
         val layoutManager = LinearLayoutManager(this.context)
-        rv_catalog_list.layoutManager = layoutManager
+        binding.rvCatalogList.layoutManager = layoutManager
 
         endlessRecyclerViewScrollListener = object : EndlessRecyclerViewScrollListener(layoutManager) {
             override fun onLoadMore(page: Int, totalItemsCount: Int, view: RecyclerView?) {
@@ -55,7 +59,7 @@ class CatalogSearchFragment : Fragment(),
             }
         }
 
-        rv_catalog_list.addOnScrollListener(endlessRecyclerViewScrollListener )
+        binding.rvCatalogList.addOnScrollListener(endlessRecyclerViewScrollListener )
     }
 
     private fun initializeHandlers() {
@@ -78,27 +82,27 @@ class CatalogSearchFragment : Fragment(),
     private fun setViewForLoading(operation: OperationType) {
         EspressoIdlingResource.increment()
         if (operation==OperationType.REPLACE_LIST) {
-            vf_catalog.displayedChild = 0
+            binding.vfCatalog.displayedChild = 0
         }
         else {
-            vf_catalog.displayedChild = 1
-            endlessProgressBar.visibility=View.VISIBLE
+            binding.vfCatalog.displayedChild = 1
+            binding.endlessProgressBar.visibility=View.VISIBLE
         }
     }
 
     private fun setViewForSuccess(data: CatalogEntity?,operationType: OperationType) {
         //Fill the ricyclerview with catalog data
         if (operationType == OperationType.REPLACE_LIST)
-            vf_catalog.displayedChild = 1
+            binding.vfCatalog.displayedChild = 1
         else {
-            endlessProgressBar.visibility=View.GONE
-            vf_catalog.displayedChild = 1
+            binding.endlessProgressBar.visibility=View.GONE
+            binding.vfCatalog.displayedChild = 1
         }
 
         //Fill the ricyclerview with catalog data
         data?.let  { newCatalog->
             //val newCatalog = data
-            val catalogAdapter = rv_catalog_list.adapter as CatalogAdapter
+            val catalogAdapter = binding.rvCatalogList.adapter as CatalogAdapter
             if (operationType==OperationType.ADD_TO_LIST)
                 catalogAdapter.addData(newCatalog.catalogList)
             else {
@@ -110,7 +114,7 @@ class CatalogSearchFragment : Fragment(),
     }
 
     private fun setViewForError() {
-        vf_catalog.displayedChild = 2
+        binding.vfCatalog.displayedChild = 2
         EspressoIdlingResource.decrement()
     }
 
@@ -118,7 +122,7 @@ class CatalogSearchFragment : Fragment(),
     private fun loadData(page: Int = 1) {
         if (page == 1) {
             endlessRecyclerViewScrollListener.resetState()
-            (rv_catalog_list.adapter as CatalogAdapter).resetData()
+            (binding.rvCatalogList.adapter as CatalogAdapter).resetData()
             Log.d("DEBUG","Reset to page: ${page}")
         }
 

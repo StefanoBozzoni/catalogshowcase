@@ -8,7 +8,7 @@ import org.koin.core.module.Module
  * Method provideDependency can be overrided and new dependencies can be supplied.
  */
 class TestMainApp : CatalogShowcaseApplication() {
-    override fun getKoinModuleList(): List<Module> {
-        return emptyList()
-    }
+    //override fun getKoinModuleList(): List<Module> {
+    //    return emptyList()
+    //}
 }

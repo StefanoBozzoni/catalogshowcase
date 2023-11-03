@@ -5,13 +5,15 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.ActionBar
 import androidx.appcompat.app.AppCompatActivity
+import com.vjapp.catalogshowcase.databinding.ActivityDetailBinding
 
 //prova modifica per vedere se jenkins parte
 class DetailActivity : AppCompatActivity() {
-
+    private lateinit var binding: ActivityDetailBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_detail)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         (supportActionBar as ActionBar).setDisplayHomeAsUpEnabled(true)
     }
 
@@ -25,7 +27,5 @@ class DetailActivity : AppCompatActivity() {
             return Intent(context, DetailActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
         }
     }
-
-
 
 }

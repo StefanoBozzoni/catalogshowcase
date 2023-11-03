@@ -50,9 +50,6 @@ class ActivitiesTest : AutoCloseKoinTest() {
 
         // GIVEN
         val scenario = launchActivity<CatalogSearchActivity>()
-        //shadowOf(getMainLooper()).idle()
-        //ShadowLooper.runMainLooperOneTask()
-        //Thread.sleep(3000)
         scenario.onActivity { activity -> assert(activity != null) }
 
     }
