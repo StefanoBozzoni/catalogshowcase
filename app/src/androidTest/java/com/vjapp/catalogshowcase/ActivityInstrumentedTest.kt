@@ -6,6 +6,7 @@ import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onData
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
@@ -14,11 +15,13 @@ import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.vjapp.catalogshowcase.adapters.CatalogAdapter
 import com.vjapp.catalogshowcase.base.BaseKoinInstrumentedTest
 import com.vjapp.catalogshowcase.di.configureEspressoTestAppComponent
+import com.vjapp.catalogshowcase.presentation.EspressoIdlingResource
 import com.vjapp.catalogshowcase.utils.RecyclerViewHasTextAtPositionAssertion
 import com.vjapp.catalogshowcase.utils.RecyclerViewItemCountAssertion
 import com.vjapp.catalogshowcase.utils.swipeUpCustom
 import com.vjapp.catalogshowcase.utils.waitUntilLoaded
 import org.hamcrest.Matchers.*
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -66,6 +69,12 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
             androidContext(ApplicationProvider.getApplicationContext())
             loadKoinModules(configureEspressoTestAppComponent(getMockWebServerUrl()).toMutableList())
         }
+        IdlingRegistry.getInstance().register(EspressoIdlingResource.countingIdlingResource)
+    }
+
+    @After
+    fun unregisterIdlingResource() {
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResource.countingIdlingResource)
     }
 
     @Test
@@ -97,7 +106,7 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
         onView(withId(R.id.rv_catalog_list)).check(RecyclerViewHasTextAtPositionAssertion(2,"Tappeto"))
         onView(withId(R.id.rv_catalog_list))
             .perform(RecyclerViewActions
-            .actionOnItemAtPosition<CatalogAdapter.ListViewHolder>(2, click()));
+            .actionOnItemAtPosition<CatalogAdapter.ListViewHolder>(2, click()))
 
         onView(withId(R.id.ivProductItem)).check((matches((isDisplayed()))))
 
@@ -117,8 +126,8 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
 
         nestedScrollView.perform(swipeUpCustom())  //<<- scrolls to bottom , it's a custom scroll because the legacy one doesn't work!
         onView(withId(R.id.spSizes)).perform(click())
-        onData(anything()).atPosition(1).perform(click());
-        onView(withId(R.id.spSizes)).check(matches(withSpinnerText(containsString("48"))));
+        onData(anything()).atPosition(1).perform(click())
+        onView(withId(R.id.spSizes)).check(matches(withSpinnerText(containsString("48"))))
 
         onView(withId(R.id.fab_color_1)).perform(click())
 

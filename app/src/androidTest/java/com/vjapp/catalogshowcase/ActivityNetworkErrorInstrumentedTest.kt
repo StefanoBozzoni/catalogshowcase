@@ -3,12 +3,15 @@ package com.vjapp.catalogshowcase
 import androidx.test.core.app.ActivityScenario.launch
 import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.vjapp.catalogshowcase.base.BaseKoinInstrumentedTest
 import com.vjapp.catalogshowcase.di.configureEspressoTestAppComponent
+import com.vjapp.catalogshowcase.presentation.EspressoIdlingResource
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -35,7 +38,12 @@ class ActivityNetworkErrorInstrumentedTest : BaseKoinInstrumentedTest() {
             androidContext(ApplicationProvider.getApplicationContext())
             loadKoinModules(configureEspressoTestAppComponent(getMockWebServerUrl()).toMutableList())
         }
+        IdlingRegistry.getInstance().register(EspressoIdlingResource.countingIdlingResource)
+    }
 
+    @After
+    fun unregisterIdlingResource() {
+        IdlingRegistry.getInstance().unregister(EspressoIdlingResource.countingIdlingResource)
     }
 
     @Test

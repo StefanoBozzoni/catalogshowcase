@@ -19,7 +19,7 @@ import com.vjapp.catalogshowcase.presentation.EspressoIdlingResource
 import com.vjapp.catalogshowcase.presentation.MainViewModel
 import com.vjapp.catalogshowcase.presentation.Resource
 import com.vjapp.catalogshowcase.presentation.ResourceState
-import org.koin.androidx.viewmodel.ext.android.sharedViewModel
+import org.koin.androidx.viewmodel.ext.android.activityViewModel
 
 class CatalogSearchFragment : Fragment(),
     CatalogAdapter.OnCatalogItemSelectionListener {
@@ -27,7 +27,7 @@ class CatalogSearchFragment : Fragment(),
     private var _binding: FragmentCatalogSearchBinding? = null
     private val binding get() = _binding!!
 
-    private val mainViewModel : MainViewModel by sharedViewModel()
+    private val mainViewModel : MainViewModel by activityViewModel()
     private lateinit var endlessRecyclerViewScrollListener : EndlessRecyclerViewScrollListener
 
     override fun onCreateView(
