@@ -35,7 +35,6 @@ class ActivityNetworkErrorInstrumentedTest : BaseKoinInstrumentedTest() {
             androidContext(ApplicationProvider.getApplicationContext())
             loadKoinModules(configureEspressoTestAppComponent(getMockWebServerUrl()).toMutableList())
         }
-
     }
 
     @Test
@@ -47,7 +46,6 @@ class ActivityNetworkErrorInstrumentedTest : BaseKoinInstrumentedTest() {
         onView(withId(R.id.image_view_icon_error)).check(matches(isDisplayed()))
     }
 
-
     @Test
     fun DetailActivityNetworkErrorTest() {
         mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_NOT_FOUND)
@@ -55,7 +53,5 @@ class ActivityNetworkErrorInstrumentedTest : BaseKoinInstrumentedTest() {
         //SystemClock.sleep(4000) //wait for the mockwebserve to come up
         onView(withId(R.id.image_view_icon_error)).check(matches(isDisplayed()))
     }
-
-
 
 }
