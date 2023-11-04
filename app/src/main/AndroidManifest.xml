@@ -7,6 +7,7 @@
     <application
             android:name=".CatalogShowcaseApplication"
             android:allowBackup="false"
+            android:fullBackupContent="false"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
@@ -26,7 +27,7 @@
                 android:screenOrientation="nosensor"
                 tools:node="merge"
                 android:exported="true"
-                android:label="YOOX Catalog">
+                android:label="Merchant Catalog">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" tools:node="merge" android:exported="true"/>
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -37,12 +38,6 @@
                 android:screenOrientation="nosensor"
                 android:label="scheda prodotto"/>
 
-            <activity
-                android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyActivity"
-                android:exported="false" />
-            <activity
-                android:name="androidx.test.core.app.InstrumentationActivityInvoker$EmptyFloatingActivity"
-                android:exported="false" />
     </application>
 
 </manifest>

@@ -6,7 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.vjapp.catalogshowcase.domain.interctor.GetProductUseCase
 import com.vjapp.catalogshowcase.domain.model.ProductEntity
-import kotlinx.coroutines.*
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class DetailViewModel(private val getProductUseCase: GetProductUseCase,
                       private val coroutineDispatcher: CoroutineDispatcher) : ViewModel() {
@@ -17,11 +20,23 @@ class DetailViewModel(private val getProductUseCase: GetProductUseCase,
     fun getProduct() {
         viewModelScope.launch(coroutineDispatcher) {
             try {
-                getProductLiveData.postValue(Resource.loading())
+                System.out.println("dispatcher name: ${coroutineDispatcher.toString()}")
+                EspressoIdlingResource.increment()
+                withContext(Dispatchers.Main) {
+                    getProductLiveData.value = Resource.loading()
+                }
+                System.out.println("invoco getProduct: ${coroutineDispatcher.toString()}")
                 val product = getProductUseCase.execute()
-                getProductLiveData.postValue(Resource.success(product))
+                System.out.println("fine invocazione getProduct: ${coroutineDispatcher.toString()}")
+                withContext(Dispatchers.Main) {
+                    getProductLiveData.value = Resource.success(product)
+                }
             } catch (t: Throwable) {
-                getProductLiveData.postValue(Resource.error("Errore caricamento Prodotto"))
+                System.out.println("---->dispatcher name: ${coroutineDispatcher.toString()}")
+                System.out.println("---->errore: ${t.message}")
+                withContext(Dispatchers.Main) {
+                    getProductLiveData.value = Resource.error("Errore caricamento Prodotto ${t.message}")
+                }
             }
         }
     }

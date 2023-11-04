@@ -14,6 +14,7 @@ import com.squareup.picasso.Picasso
 import com.vjapp.catalogshowcase.databinding.FragmentDetail2Binding
 import com.vjapp.catalogshowcase.domain.model.ProductEntity
 import com.vjapp.catalogshowcase.presentation.DetailViewModel
+import com.vjapp.catalogshowcase.presentation.EspressoIdlingResource
 import com.vjapp.catalogshowcase.presentation.Resource
 import com.vjapp.catalogshowcase.presentation.ResourceState
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
@@ -34,6 +35,13 @@ class DetailFragment : Fragment() {
     var choosenColor :Int = -1
     private set
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        savedState = savedInstanceState
+        System.out.println("---->XDEBUG rilancio il fragment")
+        detailViewModel.getProduct()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -46,7 +54,6 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initView()
-        detailViewModel.getProduct()
         initializeHandlers()
     }
 
@@ -62,23 +69,34 @@ class DetailFragment : Fragment() {
 
     private fun handleGetProductComplete(response: Resource<ProductEntity>) {
         when (response.status) {
-            ResourceState.LOADING -> binding.vfProduct.displayedChild = 0
-            ResourceState.SUCCESS -> {
-                binding.vfProduct.displayedChild = 1
-                setViewForSuccess(response.data)
+            ResourceState.LOADING -> {
+                binding.vfProduct.displayedChild = 0
+                System.out.println("-----> XDEBUG dentro loading")
             }
-            ResourceState.ERROR -> binding.vfProduct.displayedChild = 2
+            ResourceState.SUCCESS -> {
+                setViewForSuccess(response.data)
+                binding.vfProduct.displayedChild = 1
+                EspressoIdlingResource.decrement()
+            }
+            ResourceState.ERROR -> {
+                System.out.println("-----> XDEBUG dentro error")
+                binding.vfProduct.displayedChild = 2
+                EspressoIdlingResource.decrement()
+            }
         }
     }
 
     private fun setViewForSuccess(product: ProductEntity?) {
         //Fill the ricyclerview with catalog data
+        System.out.println("-----> XDEBUG dentro success")
         product?.let {
             binding.detailForm.apply {
                 tvBrand.text = it.brandName
                 tvCategory.text = it.category
                 tvPrice.text = it.price
-                Picasso.get().load(buildUrl(it.cod10)).into(ivProductItem)
+                context?.let { context->
+                    Picasso.get().load(buildUrl(it.cod10)).into(ivProductItem)
+                }
                 val descrizione = it.itemDescriptions.productInfo.joinToString(separator = "\n")
                 tvDescription.text = descrizione
             }
@@ -122,4 +140,14 @@ class DetailFragment : Fragment() {
         return "https://cdn.yoox.biz/${cod10.substring(0..1)}/${cod10}_11_f.jpg"
     }
 
+
+    private var savedState: Bundle? = null
+
+    override fun onViewStateRestored(savedInstanceState: Bundle?) {
+        super.onViewStateRestored(savedState ?: savedInstanceState)
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(savedState ?: outState)
+    }
 }

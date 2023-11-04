@@ -13,10 +13,10 @@ import com.vjapp.catalogshowcase.utils.getOrAwaitValue
 import io.mockk.MockKAnnotations
 import io.mockk.impl.annotations.MockK
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.test.runBlockingTest
-import org.hamcrest.Matchers.`is`
-import org.hamcrest.Matchers.greaterThan
+import kotlinx.coroutines.test.runTest
 import org.hamcrest.MatcherAssert.assertThat
+import org.hamcrest.Matchers.greaterThan
+import org.hamcrest.Matchers.`is`
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -71,7 +71,7 @@ class ViewModelTests2 : BaseKoinTest() {
         //val jsonObj = Gson().fromJson(sampleResponse, CatalogEntity::class.java)
         //coEvery { mgetCatalogUseCase.execute() } returns jsonObj
 
-        coroutineTestRule.dispatcher.runBlockingTest {
+        runTest {
             mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
 
             mMainViewModel.getCatalogLiveData.getOrAwaitValue {}
@@ -102,7 +102,7 @@ class ViewModelTests2 : BaseKoinTest() {
         //val jsonObj = Gson().fromJson(sampleResponse, CatalogEntity::class.java)
         //coEvery { mgetCatalogUseCase.execute() } returns jsonObj
 
-        coroutineTestRule.dispatcher.runBlockingTest {
+        runTest {
             mMainViewModel.getCatalog(SearchTypes.SEARCHRESULT)
             mMainViewModel.getCatalogLiveData.getOrAwaitValue(intialCountDown=2) {}
         }
@@ -124,7 +124,7 @@ class ViewModelTests2 : BaseKoinTest() {
         //coEvery { mgetProductUseCase.execute() } returns jsonObj
         mockNetworkResponseWithFileContent("product_response.json", HttpURLConnection.HTTP_OK)
 
-        coroutineTestRule.dispatcher.runBlockingTest {
+        runTest {
             mDetailViewModel.getProduct()
             mDetailViewModel.getProductLiveDataState().getOrAwaitValue(intialCountDown=2) {} //<<-- look here!!! to wait for success!!
         }

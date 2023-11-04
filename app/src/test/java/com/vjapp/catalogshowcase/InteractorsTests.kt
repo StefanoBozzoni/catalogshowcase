@@ -8,14 +8,14 @@ import com.vjapp.catalogshowcase.di.configureTestAppComponent
 import com.vjapp.catalogshowcase.domain.interctor.GetCatalogUseCase
 import com.vjapp.catalogshowcase.domain.model.SearchTypes
 import io.mockk.MockKAnnotations
-import junit.framework.Assert.assertEquals
-import junit.framework.Assert.assertNotNull
+import junit.framework.TestCase.assertEquals
+import junit.framework.TestCase.assertNotNull
+
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.runBlocking
-import kotlinx.coroutines.test.runBlockingTest
 import kotlinx.coroutines.test.runTest
-import org.hamcrest.Matchers.*
 import org.hamcrest.MatcherAssert.assertThat
+import org.hamcrest.Matchers.*
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -64,7 +64,7 @@ class InteractorsTest : BaseKoinTest(){
 
         //var exception : Exception?=null
         val exception:Exception? = try {
-            val dataReceived = mGetCatalogUseCase.execute(GetCatalogUseCase.Params(SearchTypes.SEARCHRESULT))
+            mGetCatalogUseCase.execute(GetCatalogUseCase.Params(SearchTypes.SEARCHRESULT))
             null
         } catch(e:Exception) {
             e

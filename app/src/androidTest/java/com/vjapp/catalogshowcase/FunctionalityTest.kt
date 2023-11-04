@@ -245,4 +245,5 @@ class FunctionalityTest: BaseKoinInstrumentedTest() {
 
         return text.toString()
     }
+
 }
