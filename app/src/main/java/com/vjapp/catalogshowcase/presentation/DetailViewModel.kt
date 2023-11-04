@@ -7,9 +7,7 @@ import androidx.lifecycle.viewModelScope
 import com.vjapp.catalogshowcase.domain.interctor.GetProductUseCase
 import com.vjapp.catalogshowcase.domain.model.ProductEntity
 import kotlinx.coroutines.CoroutineDispatcher
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 class DetailViewModel(private val getProductUseCase: GetProductUseCase,
                       private val coroutineDispatcher: CoroutineDispatcher) : ViewModel() {
@@ -18,25 +16,21 @@ class DetailViewModel(private val getProductUseCase: GetProductUseCase,
     fun getProductLiveDataState():LiveData<Resource<ProductEntity>> = getProductLiveData
 
     fun getProduct() {
-        viewModelScope.launch(coroutineDispatcher) {
+        viewModelScope.launch {
             try {
-                System.out.println("dispatcher name: ${coroutineDispatcher.toString()}")
+                System.out.println("dispatcher name: ${coroutineDispatcher}")
                 EspressoIdlingResource.increment()
-                withContext(Dispatchers.Main) {
-                    getProductLiveData.value = Resource.loading()
-                }
+                getProductLiveData.postValue(Resource.loading())
                 System.out.println("invoco getProduct: ${coroutineDispatcher.toString()}")
                 val product = getProductUseCase.execute()
                 System.out.println("fine invocazione getProduct: ${coroutineDispatcher.toString()}")
-                withContext(Dispatchers.Main) {
-                    getProductLiveData.value = Resource.success(product)
-                }
+                getProductLiveData.postValue(Resource.success(product))
+                EspressoIdlingResource.decrement()
             } catch (t: Throwable) {
                 System.out.println("---->dispatcher name: ${coroutineDispatcher.toString()}")
                 System.out.println("---->errore: ${t.message}")
-                withContext(Dispatchers.Main) {
-                    getProductLiveData.value = Resource.error("Errore caricamento Prodotto ${t.message}")
-                }
+                getProductLiveData.postValue(Resource.error("Errore caricamento Prodotto ${t.message}"))
+                EspressoIdlingResource.decrement()
             }
         }
     }

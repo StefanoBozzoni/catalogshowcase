@@ -14,7 +14,6 @@ import com.squareup.picasso.Picasso
 import com.vjapp.catalogshowcase.databinding.FragmentDetail2Binding
 import com.vjapp.catalogshowcase.domain.model.ProductEntity
 import com.vjapp.catalogshowcase.presentation.DetailViewModel
-import com.vjapp.catalogshowcase.presentation.EspressoIdlingResource
 import com.vjapp.catalogshowcase.presentation.Resource
 import com.vjapp.catalogshowcase.presentation.ResourceState
 import org.koin.androidx.viewmodel.ext.android.activityViewModel
@@ -76,12 +75,10 @@ class DetailFragment : Fragment() {
             ResourceState.SUCCESS -> {
                 setViewForSuccess(response.data)
                 binding.vfProduct.displayedChild = 1
-                EspressoIdlingResource.decrement()
             }
             ResourceState.ERROR -> {
                 System.out.println("-----> XDEBUG dentro error")
                 binding.vfProduct.displayedChild = 2
-                EspressoIdlingResource.decrement()
             }
         }
     }

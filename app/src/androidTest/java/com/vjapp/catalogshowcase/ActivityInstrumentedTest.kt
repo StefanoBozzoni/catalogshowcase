@@ -85,8 +85,6 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
 
         //val scenario2 = launchFragmentInContainer<DetailFragment>(bundleOf())
 
-        //SystemClock.sleep(1000) //wait for the mockwebserve to come up
-
         onView(withId(R.id.nav_view)).check(matches(isDisplayed()))  //La bottom bar è visibile
 
         var rvCatalog :RecyclerView? = null
@@ -115,9 +113,7 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
     @Test
     fun DetailActivityTest() {
         mockAllNetworkResponsesWithJson(HttpURLConnection.HTTP_OK)
-
         val scenario =launch(DetailActivity::class.java) //equivalent to launchactivity java
-        //SystemClock.sleep(3000) //wait for the mockwebserve to come up
 
         onView(withId(R.id.tvPrice)).check((matches((isDisplayed()))))
         onView(withId(R.id.tvPrice)).check(matches(withText("EUR 510,00")))
@@ -128,7 +124,6 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
         onView(withId(R.id.spSizes)).perform(click())
         onData(anything()).atPosition(1).perform(click())
         onView(withId(R.id.spSizes)).check(matches(withSpinnerText(containsString("48"))))
-
         onView(withId(R.id.fab_color_1)).perform(click())
 
         scenario.onActivity { activity->
@@ -136,8 +131,10 @@ class ActivityInstrumentedTest: BaseKoinInstrumentedTest() {
             val mFragment: DetailFragment?
             if (fragmentList[0] is DetailFragment) {
                 mFragment = fragmentList[0] as DetailFragment
-
-                assert(mFragment.choosenColor==0 && activity != null)
+                //assert(mFragment.choosenColor==0 && activity != null)
+                assertThat("mFragment.choosenColor is 0 and activity is not null",
+                    mFragment.choosenColor == 0 && activity != null,
+                    `is`(true))
             }
         }
     }
