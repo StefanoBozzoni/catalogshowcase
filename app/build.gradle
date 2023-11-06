@@ -102,8 +102,8 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.5.2'
     androidTestImplementation 'androidx.test:rules:1.5.0'
 
-    testImplementation "com.squareup.okhttp3:mockwebserver:4.2.1"
-    androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.2.1"
+    testImplementation "com.squareup.okhttp3:mockwebserver:4.9.3"
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.9.3"
 
     // Koin Test features
     testImplementation "io.insert-koin:koin-test:$koin_version"

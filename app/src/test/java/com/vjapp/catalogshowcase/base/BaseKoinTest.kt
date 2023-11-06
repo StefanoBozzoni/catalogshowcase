@@ -85,7 +85,6 @@ abstract class BaseKoinTest : AutoCloseKoinTest() {
             mMockServerInstance = MockWebServer()
             Logger.getLogger(MockWebServer::class.java.name).level = Level.OFF
             Logger.getLogger(OkHttp::class.java.name).setLevel(Level.OFF)
-
             mMockServerInstance.startSilently()
         }
     }

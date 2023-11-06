@@ -2,7 +2,6 @@ package com.vjapp.catalogshowcase.di
 
 import com.vjapp.catalogshowcase.cdi.domainModule
 import com.vjapp.catalogshowcase.cdi.repositoryModule
-import com.vjapp.catalogshowcase.cdi.viewModelModule
 import localModule
 
 /**
@@ -16,7 +15,7 @@ fun configureTestAppComponent(baseApi: String)
         = listOf(
     MockWebServerDIPTest,
     configureNetworkRemoteModuleForTest(baseApi),
-    viewModelModule,
+    viewModelModuleForTesting,
     repositoryModule,
     localModule,
     domainModule

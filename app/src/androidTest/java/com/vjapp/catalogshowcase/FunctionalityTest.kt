@@ -53,14 +53,12 @@ class FunctionalityTest: BaseKoinInstrumentedTest() {
     @get:Rule  //this rule is unnecessary in this test but it is used to launch the activity before
     // each test and close it after each test. refer to : https://developer.android.com/guide/components/activities/testing
     var mActivityTestRule: ActivityScenarioRule<CatalogSearchActivity> = ActivityScenarioRule(CatalogSearchActivity::class.java)
-
      */
 
     /*
     @Rule
     @JvmField
     var mActivityTestRule = ActivityTestRule(CatalogSearchActivity::class.java)
-
      */
 
     @Before
@@ -158,11 +156,7 @@ class FunctionalityTest: BaseKoinInstrumentedTest() {
                         withClassName(`is`("android.widget.FrameLayout")),
                         1)))
 
-
-            //Espresso.onIdle()
-
-            //SystemClock.sleep(500) //this is still needed because we are scrollling pages in a paginating way
-            //we have to put idling resource too here
+            //scroll pages, allowing to load more pages
             (1..8).forEach { i->
                 recyclerView3.perform(scrollToPosition<ViewHolder>(i*10))
             }

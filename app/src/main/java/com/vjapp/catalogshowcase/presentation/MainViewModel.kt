@@ -7,16 +7,15 @@ import com.vjapp.catalogshowcase.domain.interctor.GetCatalogUseCase
 import com.vjapp.catalogshowcase.domain.model.CatalogEntity
 import com.vjapp.catalogshowcase.domain.model.OperationType
 import com.vjapp.catalogshowcase.domain.model.SearchTypes
-import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.async
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val getCatalogUseCase: GetCatalogUseCase, private val coroutineDispatcher: CoroutineDispatcher) : ViewModel() {
+class MainViewModel(private val getCatalogUseCase: GetCatalogUseCase) : ViewModel() {
     val getCatalogLiveData = MutableLiveData<Pair<Resource<CatalogEntity>, OperationType>>()
 
     fun getCatalog(searchType: SearchTypes, operationType: OperationType =OperationType.REPLACE_LIST) {
-        viewModelScope.launch(coroutineDispatcher) {
+        viewModelScope.launch {
             try {
                 EspressoIdlingResource.increment()
                 getCatalogLiveData.postValue(Pair(Resource.loading(), operationType))

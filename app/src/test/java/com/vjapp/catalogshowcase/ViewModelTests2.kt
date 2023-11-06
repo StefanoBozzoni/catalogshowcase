@@ -47,7 +47,6 @@ class ViewModelTests2 : BaseKoinTest() {
         startKoin {
             modules(configureTestAppComponent(getMockWebServerUrl()))
         }
-
     }
 
     @MockK
@@ -55,14 +54,12 @@ class ViewModelTests2 : BaseKoinTest() {
     @MockK
     lateinit var mDetailViewModel: DetailViewModel
 
-    //val mMockWebServer: MockWebServer by inject()
-
     @ExperimentalCoroutinesApi
     @Test
     fun getCatalogTest() {
         val mGetCatalogUseCase: GetCatalogUseCase = get()
 
-        mMainViewModel = MainViewModel(mGetCatalogUseCase, coroutineTestRule.dispatcher)
+        mMainViewModel = MainViewModel(mGetCatalogUseCase)
 
         mockNetworkResponseWithFileContent("catalog_response.json", HttpURLConnection.HTTP_OK)
 
@@ -93,7 +90,7 @@ class ViewModelTests2 : BaseKoinTest() {
     fun getCatalogTest_error() {
         val mGetCatalogUseCase: GetCatalogUseCase =get()
 
-        mMainViewModel = MainViewModel(mGetCatalogUseCase, coroutineTestRule.dispatcher)
+        mMainViewModel = MainViewModel(mGetCatalogUseCase)
 
         mockNetworkResponseWithFileContent("catalog_response.json", HttpURLConnection.HTTP_INTERNAL_ERROR)
 
@@ -117,7 +114,7 @@ class ViewModelTests2 : BaseKoinTest() {
     @Test
     fun getProductTest() {
         //val mgetProductUseCase: GetProductUseCase = get()
-        mDetailViewModel = DetailViewModel(get(), coroutineTestRule.dispatcher)
+        mDetailViewModel = DetailViewModel(get())
 
         //val sampleResponse = getJson("product_response.json")
         //var jsonObj = Gson().fromJson(sampleResponse, ProductEntity::class.java)

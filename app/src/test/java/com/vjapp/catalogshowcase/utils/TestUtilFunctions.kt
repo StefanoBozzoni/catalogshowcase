@@ -1,6 +1,7 @@
 package com.vjapp.catalogshowcase.utils
 
 import android.view.View
+import androidx.core.widget.NestedScrollView
 import androidx.test.espresso.PerformException
 import androidx.test.espresso.UiController
 import androidx.test.espresso.ViewAction
@@ -82,6 +83,25 @@ fun waitUntilIdle(idlingResource: CountingIdlingResource, millis: Long): ViewAct
                 .withViewDescription(HumanReadables.describe(view))
                 .withCause(TimeoutException())
                 .build()
+        }
+    }
+
+}
+
+fun swipeUpCustom(): ViewAction {
+    return object : ViewAction {
+        override fun getConstraints(): Matcher<View> {
+            return ViewMatchers.isAssignableFrom(NestedScrollView::class.java)
+        }
+
+        override fun getDescription(): String {
+            return "Swipe up on NestedScrollView"
+        }
+
+        override fun perform(uiController: UiController, view: View) {
+            val scrollView = view as NestedScrollView
+            //scrollView.scrollBy(0, 200) // Adjust the scroll amount as needed
+            scrollView.scrollTo(0, scrollView.getChildAt(0).height)
         }
     }
 }

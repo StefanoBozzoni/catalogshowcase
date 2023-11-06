@@ -8,17 +8,6 @@ import org.koin.core.qualifier.named
 import org.koin.dsl.module
 
 fun configureNetworkRemoteModuleForTest(baseApi: String) =
-    /*
-    module{
-    single {
-        Retrofit.Builder()
-            .baseUrl(baseApi)
-            .addConverterFactory(GsonConverterFactory.create(GsonBuilder().create()))
-            .build()
-    }
-    factory{ get<Retrofit>().create(AppService::class.java) }
-   */
-
 
     module {
         single(named("HTTP_CLIENT")) { HttpClientFactory("", emptyList()) }

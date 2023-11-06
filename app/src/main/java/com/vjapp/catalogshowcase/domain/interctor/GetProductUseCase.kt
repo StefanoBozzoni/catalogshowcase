@@ -7,8 +7,8 @@ import kotlinx.coroutines.withContext
 
 class GetProductUseCase(private val remoteRepository: IRepository) {
     suspend fun execute(): ProductEntity {
-        return withContext(Dispatchers.IO) {
-             remoteRepository.getProduct()
+        return withContext(Dispatchers.IO)  {
+            remoteRepository.getProduct()
         }
     }
 }
