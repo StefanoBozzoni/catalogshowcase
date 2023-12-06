@@ -2,8 +2,11 @@
 
 Catalog showcase is a demo app that shows a simple catalog with a detail product page and implements several demo tests.
 
+# Update 30/09/2023  
+Now all delays have been eliminated, and for UI tests has been used IdlingResource. For local RoboElectric tests has been used a method that permits to use IdlingResource that usually aren't listened from Robolectric framework, even if there are some limitations.
+
 ## Features
-Catalog showcase implements several tests and is build upon MVVM & Clean Code architectures and uses coroutines.
+Catalog showcase implements several tests and is build upon MVVM architectures and uses coroutines.
 It also uses endless scroll feature and all the tests can be run without internet connection because internally they use a mockWebServer.
 Unit test and Integrations Tests with coroutines are a new subject that is continuos evolution and the library that is used for test uses indeed an @ExperimentalCoroutinesApi annotation to annotate tests. It's not been easy to find the necessary documentation for to run this kind of tests and i come up with some solution that nobody has been spoken about in some scenarios.
 
